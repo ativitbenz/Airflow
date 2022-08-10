@@ -1,0 +1,234 @@
+[2022-06-07 10:24:05,887] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.spark_transform_restaurant_table manual__2022-06-07T10:23:14.020833+00:00 [queued]>
+[2022-06-07 10:24:05,904] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.spark_transform_restaurant_table manual__2022-06-07T10:23:14.020833+00:00 [queued]>
+[2022-06-07 10:24:05,905] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:24:05,905] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 10:24:05,906] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:24:05,929] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): spark_transform_restaurant_table> on 2022-06-07 10:23:14.020833+00:00
+[2022-06-07 10:24:05,940] {standard_task_runner.py:52} INFO - Started process 21820 to run task
+[2022-06-07 10:24:05,950] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'spark_transform_restaurant_table', 'manual__2022-06-07T10:23:14.020833+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmperpyyg40', '--error-file', '/tmp/tmpnkhwusr2']
+[2022-06-07 10:24:05,953] {standard_task_runner.py:80} INFO - Job 106: Subtask spark_transform_restaurant_table
+[2022-06-07 10:24:06,054] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.spark_transform_restaurant_table manual__2022-06-07T10:23:14.020833+00:00 [running]> on host a4a1e1d603db
+[2022-06-07 10:24:06,174] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=spark_transform_restaurant_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T10:23:14.020833+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-07T10:23:14.020833+00:00
+[2022-06-07 10:24:06,177] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-07 10:24:06,178] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec spark-master /spark/bin/spark-submit --master local[*] --name spark_transform_restaurant_table /home/script/transform_restaurant_table.py ']
+[2022-06-07 10:24:06,193] {subprocess.py:85} INFO - Output:
+[2022-06-07 10:24:08,943] {subprocess.py:92} INFO - 22/06/07 10:24:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-06-07 10:24:10,452] {subprocess.py:92} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2022-06-07 10:24:10,468] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SparkContext: Running Spark version 3.1.1
+[2022-06-07 10:24:10,532] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO ResourceUtils: ==============================================================
+[2022-06-07 10:24:10,533] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2022-06-07 10:24:10,534] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO ResourceUtils: ==============================================================
+[2022-06-07 10:24:10,535] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SparkContext: Submitted application: spark_transform_restaurant_table
+[2022-06-07 10:24:10,570] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-06-07 10:24:10,592] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO ResourceProfile: Limiting resource is cpu
+[2022-06-07 10:24:10,593] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2022-06-07 10:24:10,671] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SecurityManager: Changing view acls to: root
+[2022-06-07 10:24:10,673] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SecurityManager: Changing modify acls to: root
+[2022-06-07 10:24:10,674] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SecurityManager: Changing view acls groups to:
+[2022-06-07 10:24:10,675] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SecurityManager: Changing modify acls groups to:
+[2022-06-07 10:24:10,675] {subprocess.py:92} INFO - 22/06/07 10:24:10 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+[2022-06-07 10:24:11,116] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO Utils: Successfully started service 'sparkDriver' on port 40741.
+[2022-06-07 10:24:11,177] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO SparkEnv: Registering MapOutputTracker
+[2022-06-07 10:24:11,262] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO SparkEnv: Registering BlockManagerMaster
+[2022-06-07 10:24:11,293] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-06-07 10:24:11,295] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-06-07 10:24:11,300] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2022-06-07 10:24:11,322] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-aaa4ec2d-0daf-4cdc-96f6-beb3d69e95d5
+[2022-06-07 10:24:11,366] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+[2022-06-07 10:24:11,399] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO SparkEnv: Registering OutputCommitCoordinator
+[2022-06-07 10:24:11,832] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2022-06-07 10:24:11,927] {subprocess.py:92} INFO - 22/06/07 10:24:11 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://d952e2b2ede8:4040
+[2022-06-07 10:24:12,449] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO Executor: Starting executor ID driver on host d952e2b2ede8
+[2022-06-07 10:24:12,501] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41873.
+[2022-06-07 10:24:12,503] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO NettyBlockTransferService: Server created on d952e2b2ede8:41873
+[2022-06-07 10:24:12,505] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2022-06-07 10:24:12,514] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, d952e2b2ede8, 41873, None)
+[2022-06-07 10:24:12,521] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO BlockManagerMasterEndpoint: Registering block manager d952e2b2ede8:41873 with 366.3 MiB RAM, BlockManagerId(driver, d952e2b2ede8, 41873, None)
+[2022-06-07 10:24:12,526] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, d952e2b2ede8, 41873, None)
+[2022-06-07 10:24:12,527] {subprocess.py:92} INFO - 22/06/07 10:24:12 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, d952e2b2ede8, 41873, None)
+[2022-06-07 10:24:13,623] {subprocess.py:92} INFO - 22/06/07 10:24:13 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/spark-warehouse').
+[2022-06-07 10:24:13,625] {subprocess.py:92} INFO - 22/06/07 10:24:13 INFO SharedState: Warehouse path is 'file:/spark-warehouse'.
+[2022-06-07 10:24:15,924] {subprocess.py:92} INFO - 22/06/07 10:24:15 INFO InMemoryFileIndex: It took 85 ms to list leaf files for 1 paths.
+[2022-06-07 10:24:16,013] {subprocess.py:92} INFO - 22/06/07 10:24:16 INFO InMemoryFileIndex: It took 6 ms to list leaf files for 1 paths.
+[2022-06-07 10:24:18,800] {subprocess.py:92} INFO - 22/06/07 10:24:18 INFO FileSourceStrategy: Pushed Filters:
+[2022-06-07 10:24:18,805] {subprocess.py:92} INFO - 22/06/07 10:24:18 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+[2022-06-07 10:24:18,810] {subprocess.py:92} INFO - 22/06/07 10:24:18 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+[2022-06-07 10:24:19,746] {subprocess.py:92} INFO - 22/06/07 10:24:19 INFO CodeGenerator: Code generated in 302.743699 ms
+[2022-06-07 10:24:19,824] {subprocess.py:92} INFO - 22/06/07 10:24:19 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 306.0 KiB, free 366.0 MiB)
+[2022-06-07 10:24:19,924] {subprocess.py:92} INFO - 22/06/07 10:24:19 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 27.5 KiB, free 366.0 MiB)
+[2022-06-07 10:24:19,929] {subprocess.py:92} INFO - 22/06/07 10:24:19 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on d952e2b2ede8:41873 (size: 27.5 KiB, free: 366.3 MiB)
+[2022-06-07 10:24:19,938] {subprocess.py:92} INFO - 22/06/07 10:24:19 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+[2022-06-07 10:24:19,955] {subprocess.py:92} INFO - 22/06/07 10:24:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-06-07 10:24:20,264] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+[2022-06-07 10:24:20,292] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-06-07 10:24:20,294] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+[2022-06-07 10:24:20,297] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO DAGScheduler: Parents of final stage: List()
+[2022-06-07 10:24:20,298] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO DAGScheduler: Missing parents: List()
+[2022-06-07 10:24:20,301] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-06-07 10:24:20,436] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.8 KiB, free 366.0 MiB)
+[2022-06-07 10:24:20,442] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 366.0 MiB)
+[2022-06-07 10:24:20,444] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on d952e2b2ede8:41873 (size: 5.4 KiB, free: 366.3 MiB)
+[2022-06-07 10:24:20,446] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1383
+[2022-06-07 10:24:20,463] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-06-07 10:24:20,465] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2022-06-07 10:24:20,531] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (d952e2b2ede8, executor driver, partition 0, ANY, 4892 bytes) taskResourceAssignments Map()
+[2022-06-07 10:24:20,552] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2022-06-07 10:24:20,954] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO FileScanRDD: Reading File path: hdfs://hive-namenode:8020/user/sqoop/restaurant_detail/part-m-00000, range: 0-743656, partition values: [empty row]
+[2022-06-07 10:24:20,982] {subprocess.py:92} INFO - 22/06/07 10:24:20 INFO CodeGenerator: Code generated in 17.833734 ms
+[2022-06-07 10:24:21,157] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1580 bytes result sent to driver
+[2022-06-07 10:24:21,170] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 650 ms on d952e2b2ede8 (executor driver) (1/1)
+[2022-06-07 10:24:21,173] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2022-06-07 10:24:21,182] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.860 s
+[2022-06-07 10:24:21,189] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-06-07 10:24:21,190] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2022-06-07 10:24:21,194] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.929971 s
+[2022-06-07 10:24:21,224] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO CodeGenerator: Code generated in 13.852291 ms
+[2022-06-07 10:24:21,287] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceStrategy: Pushed Filters:
+[2022-06-07 10:24:21,288] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceStrategy: Post-Scan Filters:
+[2022-06-07 10:24:21,289] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+[2022-06-07 10:24:21,303] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 306.0 KiB, free 365.7 MiB)
+[2022-06-07 10:24:21,315] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 27.5 KiB, free 365.6 MiB)
+[2022-06-07 10:24:21,317] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on d952e2b2ede8:41873 (size: 27.5 KiB, free: 366.2 MiB)
+[2022-06-07 10:24:21,320] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+[2022-06-07 10:24:21,322] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-06-07 10:24:21,678] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceStrategy: Pushed Filters:
+[2022-06-07 10:24:21,679] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceStrategy: Post-Scan Filters:
+[2022-06-07 10:24:21,680] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceStrategy: Output Data Schema: struct<_c0: string, _c1: string, _c2: string, _c3: string, _c4: string ... 1 more field>
+[2022-06-07 10:24:21,747] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-06-07 10:24:21,771] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-07 10:24:21,772] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-06-07 10:24:21,774] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-06-07 10:24:21,775] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-07 10:24:21,776] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-06-07 10:24:21,777] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-06-07 10:24:21,841] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO CodeGenerator: Code generated in 28.761171 ms
+[2022-06-07 10:24:21,848] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 305.9 KiB, free 365.3 MiB)
+[2022-06-07 10:24:21,870] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 27.5 KiB, free 365.3 MiB)
+[2022-06-07 10:24:21,871] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on d952e2b2ede8:41873 (size: 27.5 KiB, free: 366.2 MiB)
+[2022-06-07 10:24:21,873] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO SparkContext: Created broadcast 3 from parquet at NativeMethodAccessorImpl.java:0
+[2022-06-07 10:24:21,877] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-06-07 10:24:21,950] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2022-06-07 10:24:21,954] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-06-07 10:24:21,954] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0)
+[2022-06-07 10:24:21,955] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Parents of final stage: List()
+[2022-06-07 10:24:21,956] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Missing parents: List()
+[2022-06-07 10:24:21,957] {subprocess.py:92} INFO - 22/06/07 10:24:21 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[13] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-06-07 10:24:22,034] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 184.7 KiB, free 365.1 MiB)
+[2022-06-07 10:24:22,038] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 66.3 KiB, free 365.1 MiB)
+[2022-06-07 10:24:22,040] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on d952e2b2ede8:41873 (size: 66.3 KiB, free: 366.1 MiB)
+[2022-06-07 10:24:22,042] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1383
+[2022-06-07 10:24:22,044] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[13] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-06-07 10:24:22,045] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+[2022-06-07 10:24:22,047] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (d952e2b2ede8, executor driver, partition 0, ANY, 4892 bytes) taskResourceAssignments Map()
+[2022-06-07 10:24:22,048] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+[2022-06-07 10:24:22,210] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodeGenerator: Code generated in 19.668608 ms
+[2022-06-07 10:24:22,249] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO BlockManagerInfo: Removed broadcast_1_piece0 on d952e2b2ede8:41873 in memory (size: 5.4 KiB, free: 366.2 MiB)
+[2022-06-07 10:24:22,258] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodeGenerator: Code generated in 23.589112 ms
+[2022-06-07 10:24:22,288] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO FileScanRDD: Reading File path: hdfs://hive-namenode:8020/user/sqoop/restaurant_detail/part-m-00000, range: 0-743656, partition values: [empty row]
+[2022-06-07 10:24:22,346] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodeGenerator: Code generated in 28.227829 ms
+[2022-06-07 10:24:22,712] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-07 10:24:22,714] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-06-07 10:24:22,716] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-06-07 10:24:22,717] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-07 10:24:22,719] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-06-07 10:24:22,721] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-06-07 10:24:22,774] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodeGenerator: Code generated in 40.27587 ms
+[2022-06-07 10:24:22,799] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodeGenerator: Code generated in 15.720189 ms
+[2022-06-07 10:24:22,869] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodeGenerator: Code generated in 21.770802 ms
+[2022-06-07 10:24:22,901] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodecConfig: Compression: SNAPPY
+[2022-06-07 10:24:22,912] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO CodecConfig: Compression: SNAPPY
+[2022-06-07 10:24:22,945] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Parquet block size to 134217728
+[2022-06-07 10:24:22,946] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Parquet page size to 1048576
+[2022-06-07 10:24:22,947] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+[2022-06-07 10:24:22,948] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Dictionary is on
+[2022-06-07 10:24:22,949] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Validation is off
+[2022-06-07 10:24:22,950] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+[2022-06-07 10:24:22,951] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+[2022-06-07 10:24:22,952] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Page size checking is: estimated
+[2022-06-07 10:24:22,953] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Min row count for page size check is: 100
+[2022-06-07 10:24:22,954] {subprocess.py:92} INFO - 22/06/07 10:24:22 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+[2022-06-07 10:24:23,002] {subprocess.py:92} INFO - 22/06/07 10:24:23 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+[2022-06-07 10:24:23,003] {subprocess.py:92} INFO - {
+[2022-06-07 10:24:23,004] {subprocess.py:92} INFO -   "type" : "struct",
+[2022-06-07 10:24:23,005] {subprocess.py:92} INFO -   "fields" : [ {
+[2022-06-07 10:24:23,007] {subprocess.py:92} INFO -     "name" : "id",
+[2022-06-07 10:24:23,007] {subprocess.py:92} INFO -     "type" : "string",
+[2022-06-07 10:24:23,009] {subprocess.py:92} INFO -     "nullable" : true,
+[2022-06-07 10:24:23,010] {subprocess.py:92} INFO -     "metadata" : { }
+[2022-06-07 10:24:23,012] {subprocess.py:92} INFO -   }, {
+[2022-06-07 10:24:23,012] {subprocess.py:92} INFO -     "name" : "restaurant_name",
+[2022-06-07 10:24:23,013] {subprocess.py:92} INFO -     "type" : "string",
+[2022-06-07 10:24:23,015] {subprocess.py:92} INFO -     "nullable" : true,
+[2022-06-07 10:24:23,015] {subprocess.py:92} INFO -     "metadata" : { }
+[2022-06-07 10:24:23,016] {subprocess.py:92} INFO -   }, {
+[2022-06-07 10:24:23,017] {subprocess.py:92} INFO -     "name" : "category",
+[2022-06-07 10:24:23,018] {subprocess.py:92} INFO -     "type" : "string",
+[2022-06-07 10:24:23,019] {subprocess.py:92} INFO -     "nullable" : true,
+[2022-06-07 10:24:23,020] {subprocess.py:92} INFO -     "metadata" : { }
+[2022-06-07 10:24:23,021] {subprocess.py:92} INFO -   }, {
+[2022-06-07 10:24:23,022] {subprocess.py:92} INFO -     "name" : "estimated_cooking_time",
+[2022-06-07 10:24:23,023] {subprocess.py:92} INFO -     "type" : "float",
+[2022-06-07 10:24:23,024] {subprocess.py:92} INFO -     "nullable" : true,
+[2022-06-07 10:24:23,025] {subprocess.py:92} INFO -     "metadata" : { }
+[2022-06-07 10:24:23,026] {subprocess.py:92} INFO -   }, {
+[2022-06-07 10:24:23,027] {subprocess.py:92} INFO -     "name" : "latitude",
+[2022-06-07 10:24:23,027] {subprocess.py:92} INFO -     "type" : "decimal(11,8)",
+[2022-06-07 10:24:23,028] {subprocess.py:92} INFO -     "nullable" : true,
+[2022-06-07 10:24:23,029] {subprocess.py:92} INFO -     "metadata" : { }
+[2022-06-07 10:24:23,030] {subprocess.py:92} INFO -   }, {
+[2022-06-07 10:24:23,031] {subprocess.py:92} INFO -     "name" : "longitude",
+[2022-06-07 10:24:23,031] {subprocess.py:92} INFO -     "type" : "decimal(11,8)",
+[2022-06-07 10:24:23,032] {subprocess.py:92} INFO -     "nullable" : true,
+[2022-06-07 10:24:23,033] {subprocess.py:92} INFO -     "metadata" : { }
+[2022-06-07 10:24:23,034] {subprocess.py:92} INFO -   } ]
+[2022-06-07 10:24:23,035] {subprocess.py:92} INFO - }
+[2022-06-07 10:24:23,036] {subprocess.py:92} INFO - and corresponding Parquet message type:
+[2022-06-07 10:24:23,037] {subprocess.py:92} INFO - message spark_schema {
+[2022-06-07 10:24:23,038] {subprocess.py:92} INFO -   optional binary id (UTF8);
+[2022-06-07 10:24:23,039] {subprocess.py:92} INFO -   optional binary restaurant_name (UTF8);
+[2022-06-07 10:24:23,040] {subprocess.py:92} INFO -   optional binary category (UTF8);
+[2022-06-07 10:24:23,041] {subprocess.py:92} INFO -   optional float estimated_cooking_time;
+[2022-06-07 10:24:23,043] {subprocess.py:92} INFO -   optional fixed_len_byte_array(5) latitude (DECIMAL(11,8));
+[2022-06-07 10:24:23,044] {subprocess.py:92} INFO -   optional fixed_len_byte_array(5) longitude (DECIMAL(11,8));
+[2022-06-07 10:24:23,045] {subprocess.py:92} INFO - }
+[2022-06-07 10:24:23,045] {subprocess.py:92} INFO - 
+[2022-06-07 10:24:23,046] {subprocess.py:92} INFO - 
+[2022-06-07 10:24:23,104] {subprocess.py:92} INFO - 22/06/07 10:24:23 INFO CodecPool: Got brand-new compressor [.snappy]
+[2022-06-07 10:24:23,614] {subprocess.py:92} INFO - 22/06/07 10:24:23 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 699109
+[2022-06-07 10:24:24,018] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO FileOutputCommitter: Saved output of task 'attempt_202206071024211842903338831952185_0001_m_000000_1' to hdfs://hive-namenode:8020/user/spark/transformed_restaurant_detail/_temporary/0/task_202206071024211842903338831952185_0001_m_000000
+[2022-06-07 10:24:24,020] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO SparkHadoopMapRedUtil: attempt_202206071024211842903338831952185_0001_m_000000_1: Committed
+[2022-06-07 10:24:24,031] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 3244 bytes result sent to driver
+[2022-06-07 10:24:24,037] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 1990 ms on d952e2b2ede8 (executor driver) (1/1)
+[2022-06-07 10:24:24,038] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2022-06-07 10:24:24,039] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO DAGScheduler: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0) finished in 2.079 s
+[2022-06-07 10:24:24,041] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-06-07 10:24:24,042] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2022-06-07 10:24:24,045] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 2.090996 s
+[2022-06-07 10:24:24,083] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO BlockManagerInfo: Removed broadcast_4_piece0 on d952e2b2ede8:41873 in memory (size: 66.3 KiB, free: 366.2 MiB)
+[2022-06-07 10:24:24,111] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO FileFormatWriter: Write Job 6691349b-bd0e-4894-8b49-727d8ebeab08 committed.
+[2022-06-07 10:24:24,116] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO FileFormatWriter: Finished processing stats for write job 6691349b-bd0e-4894-8b49-727d8ebeab08.
+[2022-06-07 10:24:24,165] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO SparkContext: Invoking stop() from shutdown hook
+[2022-06-07 10:24:24,179] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO SparkUI: Stopped Spark web UI at http://d952e2b2ede8:4040
+[2022-06-07 10:24:24,199] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2022-06-07 10:24:24,216] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO MemoryStore: MemoryStore cleared
+[2022-06-07 10:24:24,218] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO BlockManager: BlockManager stopped
+[2022-06-07 10:24:24,239] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2022-06-07 10:24:24,244] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2022-06-07 10:24:24,289] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO SparkContext: Successfully stopped SparkContext
+[2022-06-07 10:24:24,291] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO ShutdownHookManager: Shutdown hook called
+[2022-06-07 10:24:24,293] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-ed69a0fc-a1b0-45dd-a39d-f745d5b4fed8/pyspark-612a0027-b0c2-413c-9fbf-9cf7b8632c15
+[2022-06-07 10:24:24,299] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-a5115370-18ec-4635-b9f8-ad2621a91305
+[2022-06-07 10:24:24,303] {subprocess.py:92} INFO - 22/06/07 10:24:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-ed69a0fc-a1b0-45dd-a39d-f745d5b4fed8
+[2022-06-07 10:24:24,561] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-07 10:24:24,605] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=spark_transform_restaurant_table, execution_date=20220607T102314, start_date=20220607T102405, end_date=20220607T102424
+[2022-06-07 10:24:24,636] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 10:24:24,713] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

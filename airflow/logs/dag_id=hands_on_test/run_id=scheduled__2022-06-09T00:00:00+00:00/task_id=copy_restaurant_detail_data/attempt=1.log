@@ -1,0 +1,119 @@
+[2022-06-10 04:42:38,562] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 04:42:38,771] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 04:42:38,799] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 04:42:38,808] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-10 04:42:38,809] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 04:42:38,981] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_restaurant_detail_data> on 2022-06-09 00:00:00+00:00
+[2022-06-10 04:42:39,019] {standard_task_runner.py:52} INFO - Started process 223 to run task
+[2022-06-10 04:42:39,030] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_restaurant_detail_data', 'scheduled__2022-06-09T00:00:00+00:00', '--job-id', '259', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxafmdtv2', '--error-file', '/tmp/tmpvjz4wo46']
+[2022-06-10 04:42:39,036] {standard_task_runner.py:80} INFO - Job 259: Subtask copy_restaurant_detail_data
+[2022-06-10 04:42:39,708] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-10 04:42:41,082] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_restaurant_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-09T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-09T00:00:00+00:00
+[2022-06-10 04:42:41,232] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-10 04:42:41,314] {dbapi.py:208} INFO - Running statement: 
+COPY restaurant_detail FROM '/var/lib/postgresql/data/lmwn/restaurant_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-10 04:42:41,368] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 188, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 212, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "restaurant_detail_pkey"
+DETAIL:  Key (id)=(R_99988) already exists.
+CONTEXT:  COPY restaurant_detail, line 2
+
+[2022-06-10 04:42:41,488] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=copy_restaurant_detail_data, execution_date=20220609T000000, start_date=20220610T044238, end_date=20220610T044241
+[2022-06-10 04:42:41,685] {standard_task_runner.py:97} ERROR - Failed to execute job 259 for task copy_restaurant_detail_data (duplicate key value violates unique constraint "restaurant_detail_pkey"
+DETAIL:  Key (id)=(R_99988) already exists.
+CONTEXT:  COPY restaurant_detail, line 2
+; 223)
+[2022-06-10 04:42:41,834] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-10 04:42:43,027] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-10 05:00:02,212] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 05:00:02,233] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 05:00:02,234] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 05:00:02,235] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-10 05:00:02,236] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 05:00:02,255] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_restaurant_detail_data> on 2022-06-09 00:00:00+00:00
+[2022-06-10 05:00:02,265] {standard_task_runner.py:52} INFO - Started process 1286 to run task
+[2022-06-10 05:00:02,271] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_restaurant_detail_data', 'scheduled__2022-06-09T00:00:00+00:00', '--job-id', '272', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpq_76t_4p', '--error-file', '/tmp/tmpdo7q3eye']
+[2022-06-10 05:00:02,273] {standard_task_runner.py:80} INFO - Job 272: Subtask copy_restaurant_detail_data
+[2022-06-10 05:00:02,399] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-10 05:00:02,546] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_restaurant_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-09T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-09T00:00:00+00:00
+[2022-06-10 05:00:02,560] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-10 05:00:02,576] {dbapi.py:208} INFO - Running statement: 
+COPY restaurant_detail FROM '/var/lib/postgresql/data/lmwn/restaurant_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-10 05:00:02,714] {dbapi.py:216} INFO - Rows affected: 12623
+[2022-06-10 05:00:02,745] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_restaurant_detail_data, execution_date=20220609T000000, start_date=20220610T050002, end_date=20220610T050002
+[2022-06-10 05:00:02,805] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-10 05:00:02,899] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-10 06:57:45,018] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 06:57:45,056] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 06:57:45,057] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 06:57:45,058] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-10 06:57:45,059] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 06:57:45,080] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_restaurant_detail_data> on 2022-06-09 00:00:00+00:00
+[2022-06-10 06:57:45,098] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_restaurant_detail_data', 'scheduled__2022-06-09T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp0ql1ekv7', '--error-file', '/tmp/tmpqygp1imr']
+[2022-06-10 06:57:45,103] {standard_task_runner.py:52} INFO - Started process 390 to run task
+[2022-06-10 06:57:45,103] {standard_task_runner.py:80} INFO - Job 18: Subtask copy_restaurant_detail_data
+[2022-06-10 06:57:45,211] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [running]> on host a0fd966c00bf
+[2022-06-10 06:57:45,519] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_restaurant_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-09T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-09T00:00:00+00:00
+[2022-06-10 06:57:45,562] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-10 06:57:45,581] {dbapi.py:208} INFO - Running statement: 
+COPY restaurant_detail FROM '/var/lib/postgresql/data/lmwn/restaurant_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-10 06:57:45,970] {dbapi.py:216} INFO - Rows affected: 12623
+[2022-06-10 06:57:46,012] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_restaurant_detail_data, execution_date=20220609T000000, start_date=20220610T065745, end_date=20220610T065746
+[2022-06-10 06:57:46,065] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-10 06:57:46,276] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-10 07:17:27,964] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 07:17:27,979] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 07:17:27,980] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 07:17:27,981] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-10 07:17:27,982] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 07:17:28,011] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_restaurant_detail_data> on 2022-06-09 00:00:00+00:00
+[2022-06-10 07:17:28,017] {standard_task_runner.py:52} INFO - Started process 1735 to run task
+[2022-06-10 07:17:28,024] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_restaurant_detail_data', 'scheduled__2022-06-09T00:00:00+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpl7dtx1f4', '--error-file', '/tmp/tmpinmf277t']
+[2022-06-10 07:17:28,026] {standard_task_runner.py:80} INFO - Job 56: Subtask copy_restaurant_detail_data
+[2022-06-10 07:17:28,116] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_restaurant_detail_data scheduled__2022-06-09T00:00:00+00:00 [running]> on host a0fd966c00bf
+[2022-06-10 07:17:28,227] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_restaurant_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-09T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-09T00:00:00+00:00
+[2022-06-10 07:17:28,244] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-10 07:17:28,256] {dbapi.py:208} INFO - Running statement: 
+COPY restaurant_detail FROM '/var/lib/postgresql/data/lmwn/restaurant_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-10 07:17:28,416] {dbapi.py:216} INFO - Rows affected: 12623
+[2022-06-10 07:17:28,440] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_restaurant_detail_data, execution_date=20220609T000000, start_date=20220610T071727, end_date=20220610T071728
+[2022-06-10 07:17:28,477] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-10 07:17:28,577] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

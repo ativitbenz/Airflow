@@ -1,0 +1,104 @@
+[2022-06-08 02:39:54,879] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 02:39:54,906] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 02:39:54,907] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 02:39:54,908] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 02:39:54,909] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 02:39:54,941] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_order_detail> on 2022-06-07 00:00:00+00:00
+[2022-06-08 02:39:54,951] {standard_task_runner.py:52} INFO - Started process 307 to run task
+[2022-06-08 02:39:54,956] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_order_detail', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpdguht5g5', '--error-file', '/tmp/tmpt6q110d3']
+[2022-06-08 02:39:54,958] {standard_task_runner.py:80} INFO - Job 5: Subtask create_order_detail
+[2022-06-08 02:39:55,066] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 02:39:55,326] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_order_detail
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 02:39:55,350] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 02:39:55,380] {dbapi.py:208} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS order_detail (
+    order_created_timestamp TIMESTAMP,
+    status VARCHAR,
+    price INT,
+    discount FLOAT,
+    id VARCHAR PRIMARY KEY NOT NULL,
+    driver_id VARCHAR,
+    user_id VARCHAR,
+    restaurant_id VARCHAR
+);, parameters: None
+[2022-06-08 02:39:55,494] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_order_detail, execution_date=20220607T000000, start_date=20220608T023954, end_date=20220608T023955
+[2022-06-08 02:39:55,584] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 02:39:55,791] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-08 05:17:01,067] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 05:17:01,084] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 05:17:01,085] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 05:17:01,086] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 05:17:01,087] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 05:17:01,107] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_order_detail> on 2022-06-07 00:00:00+00:00
+[2022-06-08 05:17:01,114] {standard_task_runner.py:52} INFO - Started process 11007 to run task
+[2022-06-08 05:17:01,119] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_order_detail', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6lki62o6', '--error-file', '/tmp/tmponsvkzcb']
+[2022-06-08 05:17:01,122] {standard_task_runner.py:80} INFO - Job 146: Subtask create_order_detail
+[2022-06-08 05:17:01,205] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 05:17:01,341] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_order_detail
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 05:17:01,371] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 05:17:01,372] {dbapi.py:208} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS order_detail (
+    order_created_timestamp TIMESTAMP,
+    status VARCHAR,
+    price INT,
+    discount FLOAT,
+    id VARCHAR PRIMARY KEY NOT NULL,
+    driver_id VARCHAR,
+    user_id VARCHAR,
+    restaurant_id VARCHAR
+);, parameters: None
+[2022-06-08 05:17:01,404] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_order_detail, execution_date=20220607T000000, start_date=20220608T051701, end_date=20220608T051701
+[2022-06-08 05:17:01,430] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 05:17:01,551] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-08 06:18:45,870] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 06:18:45,917] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 06:18:45,926] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 06:18:45,933] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 06:18:45,936] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 06:18:46,037] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_order_detail> on 2022-06-07 00:00:00+00:00
+[2022-06-08 06:18:46,059] {standard_task_runner.py:52} INFO - Started process 14950 to run task
+[2022-06-08 06:18:46,082] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_order_detail', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp9lovnoze', '--error-file', '/tmp/tmpqzcjpvmk']
+[2022-06-08 06:18:46,087] {standard_task_runner.py:80} INFO - Job 170: Subtask create_order_detail
+[2022-06-08 06:18:46,506] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 06:18:47,235] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_order_detail
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 06:18:47,284] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 06:18:47,323] {dbapi.py:208} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS order_detail (
+    order_created_timestamp TIMESTAMP,
+    status VARCHAR,
+    price INT,
+    discount FLOAT,
+    id VARCHAR PRIMARY KEY NOT NULL,
+    driver_id VARCHAR,
+    user_id VARCHAR,
+    restaurant_id VARCHAR
+);, parameters: None
+[2022-06-08 06:18:47,327] {postgres.py:94} INFO - NOTICE:  relation "order_detail" already exists, skipping
+
+[2022-06-08 06:18:47,441] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_order_detail, execution_date=20220607T000000, start_date=20220608T061845, end_date=20220608T061847
+[2022-06-08 06:18:47,505] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 06:18:47,636] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

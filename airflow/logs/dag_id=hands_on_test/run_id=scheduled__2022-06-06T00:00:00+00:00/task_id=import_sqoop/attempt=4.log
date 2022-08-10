@@ -1,0 +1,172 @@
+[2022-06-07 04:46:06,248] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 04:46:06,265] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 04:46:06,266] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 04:46:06,268] {taskinstance.py:1357} INFO - Starting attempt 4 of 4
+[2022-06-07 04:46:06,268] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 04:46:06,290] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): import_sqoop> on 2022-06-06 00:00:00+00:00
+[2022-06-07 04:46:06,300] {standard_task_runner.py:52} INFO - Started process 850 to run task
+[2022-06-07 04:46:06,305] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'import_sqoop', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp9t2clhu1', '--error-file', '/tmp/tmpakhelryf']
+[2022-06-07 04:46:06,308] {standard_task_runner.py:80} INFO - Job 34: Subtask import_sqoop
+[2022-06-07 04:46:06,386] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.import_sqoop scheduled__2022-06-06T00:00:00+00:00 [running]> on host a4a1e1d603db
+[2022-06-07 04:46:06,491] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=import_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 04:46:06,494] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-07 04:46:06,495] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/import_sqoop.sh ']
+[2022-06-07 04:46:06,509] {subprocess.py:85} INFO - Output:
+[2022-06-07 04:46:08,239] {subprocess.py:92} INFO - 22/06/07 04:46:08 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+[2022-06-07 04:46:08,248] {subprocess.py:92} INFO - Deleted /user/sqoop
+[2022-06-07 04:46:10,643] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hbase does not exist! HBase imports will fail.
+[2022-06-07 04:46:10,645] {subprocess.py:92} INFO - Please set $HBASE_HOME to the root of your HBase installation.
+[2022-06-07 04:46:10,646] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hcatalog does not exist! HCatalog jobs will fail.
+[2022-06-07 04:46:10,647] {subprocess.py:92} INFO - Please set $HCAT_HOME to the root of your HCatalog installation.
+[2022-06-07 04:46:10,648] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../accumulo does not exist! Accumulo imports will fail.
+[2022-06-07 04:46:10,649] {subprocess.py:92} INFO - Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+[2022-06-07 04:46:10,650] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../zookeeper does not exist! Accumulo imports will fail.
+[2022-06-07 04:46:10,651] {subprocess.py:92} INFO - Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+[2022-06-07 04:46:11,267] {subprocess.py:92} INFO - 22/06/07 04:46:11 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+[2022-06-07 04:46:11,359] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+[2022-06-07 04:46:11,364] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: It seems that you've specified at least one of following:
+[2022-06-07 04:46:11,365] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--hive-home
+[2022-06-07 04:46:11,366] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--hive-overwrite
+[2022-06-07 04:46:11,367] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--create-hive-table
+[2022-06-07 04:46:11,369] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--hive-table
+[2022-06-07 04:46:11,370] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--hive-partition-key
+[2022-06-07 04:46:11,374] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--hive-partition-value
+[2022-06-07 04:46:11,375] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: 	--map-column-hive
+[2022-06-07 04:46:11,376] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: Without specifying parameter --hive-import. Please note that
+[2022-06-07 04:46:11,377] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: those arguments will not be used in this session. Either
+[2022-06-07 04:46:11,377] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: specify --hive-import to apply them correctly or remove them
+[2022-06-07 04:46:11,378] {subprocess.py:92} INFO - 22/06/07 04:46:11 WARN tool.BaseSqoopTool: from command line to remove this warning.
+[2022-06-07 04:46:11,379] {subprocess.py:92} INFO - 22/06/07 04:46:11 INFO tool.BaseSqoopTool: Please note that --hive-home, --hive-partition-key,
+[2022-06-07 04:46:11,380] {subprocess.py:92} INFO - 22/06/07 04:46:11 INFO tool.BaseSqoopTool: 	 hive-partition-value and --map-column-hive options are
+[2022-06-07 04:46:11,381] {subprocess.py:92} INFO - 22/06/07 04:46:11 INFO tool.BaseSqoopTool: 	 are also valid for HCatalog imports and exports
+[2022-06-07 04:46:11,488] {subprocess.py:92} INFO - 22/06/07 04:46:11 INFO manager.SqlManager: Using default fetchSize of 1000
+[2022-06-07 04:46:11,490] {subprocess.py:92} INFO - 22/06/07 04:46:11 INFO tool.CodeGenTool: Beginning code generation
+[2022-06-07 04:46:11,574] {subprocess.py:92} INFO - 22/06/07 04:46:11 ERROR manager.SqlManager: Error executing statement: org.postgresql.util.PSQLException: The connection attempt failed.
+[2022-06-07 04:46:11,575] {subprocess.py:92} INFO - org.postgresql.util.PSQLException: The connection attempt failed.
+[2022-06-07 04:46:11,576] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+[2022-06-07 04:46:11,577] {subprocess.py:92} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+[2022-06-07 04:46:11,578] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+[2022-06-07 04:46:11,579] {subprocess.py:92} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:465)
+[2022-06-07 04:46:11,579] {subprocess.py:92} INFO - 	at org.postgresql.Driver.connect(Driver.java:264)
+[2022-06-07 04:46:11,580] {subprocess.py:92} INFO - 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[2022-06-07 04:46:11,581] {subprocess.py:92} INFO - 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+[2022-06-07 04:46:11,582] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:904)
+[2022-06-07 04:46:11,582] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:59)
+[2022-06-07 04:46:11,583] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:763)
+[2022-06-07 04:46:11,584] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:786)
+[2022-06-07 04:46:11,585] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.getColumnInfoForRawQuery(SqlManager.java:289)
+[2022-06-07 04:46:11,586] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:260)
+[2022-06-07 04:46:11,587] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:246)
+[2022-06-07 04:46:11,588] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:327)
+[2022-06-07 04:46:11,590] {subprocess.py:92} INFO - 	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1872)
+[2022-06-07 04:46:11,591] {subprocess.py:92} INFO - 	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1671)
+[2022-06-07 04:46:11,592] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:106)
+[2022-06-07 04:46:11,593] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:501)
+[2022-06-07 04:46:11,595] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:628)
+[2022-06-07 04:46:11,596] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.run(Sqoop.java:147)
+[2022-06-07 04:46:11,597] {subprocess.py:92} INFO - 	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+[2022-06-07 04:46:11,598] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:183)
+[2022-06-07 04:46:11,599] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:234)
+[2022-06-07 04:46:11,600] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:243)
+[2022-06-07 04:46:11,601] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.main(Sqoop.java:252)
+[2022-06-07 04:46:11,602] {subprocess.py:92} INFO - Caused by: java.net.UnknownHostException: database
+[2022-06-07 04:46:11,603] {subprocess.py:92} INFO - 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+[2022-06-07 04:46:11,605] {subprocess.py:92} INFO - 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+[2022-06-07 04:46:11,607] {subprocess.py:92} INFO - 	at java.net.Socket.connect(Socket.java:589)
+[2022-06-07 04:46:11,608] {subprocess.py:92} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+[2022-06-07 04:46:11,610] {subprocess.py:92} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:95)
+[2022-06-07 04:46:11,611] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+[2022-06-07 04:46:11,613] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+[2022-06-07 04:46:11,620] {subprocess.py:92} INFO - 	... 25 more
+[2022-06-07 04:46:11,621] {subprocess.py:92} INFO - 22/06/07 04:46:11 ERROR tool.ImportTool: Import failed: java.io.IOException: No columns to generate for ClassWriter
+[2022-06-07 04:46:11,622] {subprocess.py:92} INFO - 	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1677)
+[2022-06-07 04:46:11,623] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:106)
+[2022-06-07 04:46:11,625] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:501)
+[2022-06-07 04:46:11,626] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:628)
+[2022-06-07 04:46:11,627] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.run(Sqoop.java:147)
+[2022-06-07 04:46:11,628] {subprocess.py:92} INFO - 	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+[2022-06-07 04:46:11,628] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:183)
+[2022-06-07 04:46:11,629] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:234)
+[2022-06-07 04:46:11,631] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:243)
+[2022-06-07 04:46:11,632] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.main(Sqoop.java:252)
+[2022-06-07 04:46:11,633] {subprocess.py:92} INFO - 
+[2022-06-07 04:46:11,633] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hbase does not exist! HBase imports will fail.
+[2022-06-07 04:46:11,634] {subprocess.py:92} INFO - Please set $HBASE_HOME to the root of your HBase installation.
+[2022-06-07 04:46:11,636] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hcatalog does not exist! HCatalog jobs will fail.
+[2022-06-07 04:46:11,637] {subprocess.py:92} INFO - Please set $HCAT_HOME to the root of your HCatalog installation.
+[2022-06-07 04:46:11,637] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../accumulo does not exist! Accumulo imports will fail.
+[2022-06-07 04:46:11,639] {subprocess.py:92} INFO - Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+[2022-06-07 04:46:11,640] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../zookeeper does not exist! Accumulo imports will fail.
+[2022-06-07 04:46:11,641] {subprocess.py:92} INFO - Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+[2022-06-07 04:46:12,433] {subprocess.py:92} INFO - 22/06/07 04:46:12 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+[2022-06-07 04:46:12,559] {subprocess.py:92} INFO - 22/06/07 04:46:12 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+[2022-06-07 04:46:12,718] {subprocess.py:92} INFO - 22/06/07 04:46:12 INFO manager.SqlManager: Using default fetchSize of 1000
+[2022-06-07 04:46:12,720] {subprocess.py:92} INFO - 22/06/07 04:46:12 INFO tool.CodeGenTool: Beginning code generation
+[2022-06-07 04:46:12,854] {subprocess.py:92} INFO - 22/06/07 04:46:12 ERROR manager.SqlManager: Error executing statement: org.postgresql.util.PSQLException: The connection attempt failed.
+[2022-06-07 04:46:12,858] {subprocess.py:92} INFO - org.postgresql.util.PSQLException: The connection attempt failed.
+[2022-06-07 04:46:12,859] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315)
+[2022-06-07 04:46:12,861] {subprocess.py:92} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+[2022-06-07 04:46:12,862] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+[2022-06-07 04:46:12,863] {subprocess.py:92} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:465)
+[2022-06-07 04:46:12,865] {subprocess.py:92} INFO - 	at org.postgresql.Driver.connect(Driver.java:264)
+[2022-06-07 04:46:12,866] {subprocess.py:92} INFO - 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[2022-06-07 04:46:12,868] {subprocess.py:92} INFO - 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+[2022-06-07 04:46:12,870] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:904)
+[2022-06-07 04:46:12,872] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:59)
+[2022-06-07 04:46:12,873] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:763)
+[2022-06-07 04:46:12,874] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:786)
+[2022-06-07 04:46:12,875] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.getColumnInfoForRawQuery(SqlManager.java:289)
+[2022-06-07 04:46:12,876] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:260)
+[2022-06-07 04:46:12,878] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:246)
+[2022-06-07 04:46:12,879] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:327)
+[2022-06-07 04:46:12,880] {subprocess.py:92} INFO - 	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1872)
+[2022-06-07 04:46:12,882] {subprocess.py:92} INFO - 	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1671)
+[2022-06-07 04:46:12,883] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:106)
+[2022-06-07 04:46:12,884] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:501)
+[2022-06-07 04:46:12,885] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:628)
+[2022-06-07 04:46:12,886] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.run(Sqoop.java:147)
+[2022-06-07 04:46:12,887] {subprocess.py:92} INFO - 	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+[2022-06-07 04:46:12,889] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:183)
+[2022-06-07 04:46:12,897] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:234)
+[2022-06-07 04:46:12,898] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:243)
+[2022-06-07 04:46:12,900] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.main(Sqoop.java:252)
+[2022-06-07 04:46:12,902] {subprocess.py:92} INFO - Caused by: java.net.UnknownHostException: database
+[2022-06-07 04:46:12,905] {subprocess.py:92} INFO - 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+[2022-06-07 04:46:12,908] {subprocess.py:92} INFO - 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+[2022-06-07 04:46:12,910] {subprocess.py:92} INFO - 	at java.net.Socket.connect(Socket.java:589)
+[2022-06-07 04:46:12,911] {subprocess.py:92} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+[2022-06-07 04:46:12,914] {subprocess.py:92} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:95)
+[2022-06-07 04:46:12,917] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+[2022-06-07 04:46:12,918] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+[2022-06-07 04:46:12,919] {subprocess.py:92} INFO - 	... 25 more
+[2022-06-07 04:46:12,920] {subprocess.py:92} INFO - 22/06/07 04:46:12 ERROR tool.ImportTool: Import failed: java.io.IOException: No columns to generate for ClassWriter
+[2022-06-07 04:46:12,921] {subprocess.py:92} INFO - 	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1677)
+[2022-06-07 04:46:12,922] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:106)
+[2022-06-07 04:46:12,924] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:501)
+[2022-06-07 04:46:12,925] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:628)
+[2022-06-07 04:46:12,926] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.run(Sqoop.java:147)
+[2022-06-07 04:46:12,927] {subprocess.py:92} INFO - 	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+[2022-06-07 04:46:12,928] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:183)
+[2022-06-07 04:46:12,928] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:234)
+[2022-06-07 04:46:12,929] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:243)
+[2022-06-07 04:46:12,930] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.main(Sqoop.java:252)
+[2022-06-07 04:46:12,931] {subprocess.py:92} INFO - 
+[2022-06-07 04:46:12,932] {subprocess.py:96} INFO - Command exited with return code 1
+[2022-06-07 04:46:12,959] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-07 04:46:12,965] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=hands_on_test, task_id=import_sqoop, execution_date=20220606T000000, start_date=20220607T044606, end_date=20220607T044612
+[2022-06-07 04:46:12,986] {standard_task_runner.py:97} ERROR - Failed to execute job 34 for task import_sqoop (Bash command failed. The command returned a non-zero exit code 1.; 850)
+[2022-06-07 04:46:13,043] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 04:46:13,147] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

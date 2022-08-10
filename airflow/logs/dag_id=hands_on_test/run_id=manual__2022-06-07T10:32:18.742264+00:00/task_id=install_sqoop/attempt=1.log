@@ -1,0 +1,31 @@
+[2022-06-07 10:32:29,583] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.install_sqoop manual__2022-06-07T10:32:18.742264+00:00 [queued]>
+[2022-06-07 10:32:29,599] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.install_sqoop manual__2022-06-07T10:32:18.742264+00:00 [queued]>
+[2022-06-07 10:32:29,600] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:32:29,601] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 10:32:29,602] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:32:29,624] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): install_sqoop> on 2022-06-07 10:32:18.742264+00:00
+[2022-06-07 10:32:29,630] {standard_task_runner.py:52} INFO - Started process 288 to run task
+[2022-06-07 10:32:29,635] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'install_sqoop', 'manual__2022-06-07T10:32:18.742264+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxmzzgl7g', '--error-file', '/tmp/tmprfhix9re']
+[2022-06-07 10:32:29,637] {standard_task_runner.py:80} INFO - Job 15: Subtask install_sqoop
+[2022-06-07 10:32:29,715] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.install_sqoop manual__2022-06-07T10:32:18.742264+00:00 [running]> on host a91a90e971c8
+[2022-06-07 10:32:29,821] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=install_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T10:32:18.742264+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-07T10:32:18.742264+00:00
+[2022-06-07 10:32:29,823] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-07 10:32:29,824] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/install_sqoop.sh ']
+[2022-06-07 10:32:29,837] {subprocess.py:85} INFO - Output:
+[2022-06-07 10:32:30,034] {subprocess.py:92} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2022-06-07 10:32:30,042] {subprocess.py:92} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2022-06-07 10:32:41,958] {subprocess.py:92} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 17.1M    0 45889    0     0  45354      0  0:06:35  0:00:01  0:06:34 45389  3 17.1M    3  563k    0     0   220k      0  0:01:19  0:00:02  0:01:17  220k  4 17.1M    4  818k    0     0   272k      0  0:01:04  0:00:03  0:01:01  272k 11 17.1M   11 2061k    0     0   502k      0  0:00:34  0:00:04  0:00:30  502k 20 17.1M   20 3568k    0     0   715k      0  0:00:24  0:00:04  0:00:20  715k 31 17.1M   31 5591k    0     0   919k      0  0:00:19  0:00:06  0:00:13 1094k 42 17.1M   42 7410k    0     0  1060k      0  0:00:16  0:00:06  0:00:10 1546k 54 17.1M   54 9531k    0     0  1183k      0  0:00:14  0:00:08  0:00:06 1724k 65 17.1M   65 11.1M    0     0  1275k      0  0:00:13  0:00:08  0:00:05 1924k 77 17.1M   77 13.2M    0     0  1351k      0  0:00:12  0:00:10  0:00:02 1979k 88 17.1M   88 15.1M    0     0  1412k      0  0:00:12  0:00:10  0:00:02 2021k100 17.1M  100 17.1M    0     0  1469k      0  0:00:11  0:00:11 --:--:-- 2047k
+[2022-06-07 10:33:03,141] {subprocess.py:92} INFO - rm: cannot remove 'sqoop-1.4.7.bin__hadoop-2.6.0': No such file or directory
+[2022-06-07 10:33:03,170] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-07 10:33:03,213] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=install_sqoop, execution_date=20220607T103218, start_date=20220607T103229, end_date=20220607T103303
+[2022-06-07 10:33:03,244] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 10:33:03,301] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

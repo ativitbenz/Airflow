@@ -1,0 +1,66 @@
+[2022-06-08 03:41:55,453] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.generate_sql_requirement manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 03:41:55,469] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.generate_sql_requirement manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 03:41:55,470] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 03:41:55,471] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-08 03:41:55,471] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 03:41:55,493] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): generate_sql_requirement> on 2022-06-08 02:39:54.959518+00:00
+[2022-06-08 03:41:55,499] {standard_task_runner.py:52} INFO - Started process 4730 to run task
+[2022-06-08 03:41:55,504] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'generate_sql_requirement', 'manual__2022-06-08T02:39:54.959518+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2gashup1', '--error-file', '/tmp/tmp9egy1wct']
+[2022-06-08 03:41:55,506] {standard_task_runner.py:80} INFO - Job 85: Subtask generate_sql_requirement
+[2022-06-08 03:41:55,584] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.generate_sql_requirement manual__2022-06-08T02:39:54.959518+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 03:41:55,690] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=generate_sql_requirement
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T02:39:54.959518+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T02:39:54.959518+00:00
+[2022-06-08 03:41:55,692] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 03:41:55,693] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec spark-master /spark/bin/spark-submit --master local[*] --name spark_create_restaurant_detail_new /home/script/sql_requirement.py ']
+[2022-06-08 03:41:55,706] {subprocess.py:85} INFO - Output:
+[2022-06-08 03:41:58,221] {subprocess.py:92} INFO - 22/06/08 03:41:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-06-08 03:41:59,126] {subprocess.py:92} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2022-06-08 03:41:59,140] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SparkContext: Running Spark version 3.1.1
+[2022-06-08 03:41:59,200] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO ResourceUtils: ==============================================================
+[2022-06-08 03:41:59,201] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2022-06-08 03:41:59,203] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO ResourceUtils: ==============================================================
+[2022-06-08 03:41:59,204] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SparkContext: Submitted application: spark_create_restaurant_detail_new
+[2022-06-08 03:41:59,250] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-06-08 03:41:59,273] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO ResourceProfile: Limiting resource is cpu
+[2022-06-08 03:41:59,275] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2022-06-08 03:41:59,405] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SecurityManager: Changing view acls to: root
+[2022-06-08 03:41:59,406] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SecurityManager: Changing modify acls to: root
+[2022-06-08 03:41:59,407] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SecurityManager: Changing view acls groups to:
+[2022-06-08 03:41:59,408] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SecurityManager: Changing modify acls groups to:
+[2022-06-08 03:41:59,409] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+[2022-06-08 03:41:59,786] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO Utils: Successfully started service 'sparkDriver' on port 43237.
+[2022-06-08 03:41:59,823] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SparkEnv: Registering MapOutputTracker
+[2022-06-08 03:41:59,888] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SparkEnv: Registering BlockManagerMaster
+[2022-06-08 03:41:59,916] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-06-08 03:41:59,917] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-06-08 03:41:59,924] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2022-06-08 03:41:59,954] {subprocess.py:92} INFO - 22/06/08 03:41:59 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-15e16026-9b23-43c3-a68c-bc5dad030df8
+[2022-06-08 03:42:00,001] {subprocess.py:92} INFO - 22/06/08 03:42:00 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+[2022-06-08 03:42:00,038] {subprocess.py:92} INFO - 22/06/08 03:42:00 INFO SparkEnv: Registering OutputCommitCoordinator
+[2022-06-08 03:42:00,519] {subprocess.py:92} INFO - 22/06/08 03:42:00 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2022-06-08 03:42:00,601] {local_task_job.py:221} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2022-06-08 03:42:00,609] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 4730. PIDs of all processes in the group: [4731, 4730]
+[2022-06-08 03:42:00,611] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 4730
+[2022-06-08 03:42:00,612] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-06-08 03:42:00,613] {subprocess.py:103} INFO - Sending SIGTERM signal to process group
+[2022-06-08 03:42:00,637] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 189, in execute
+    cwd=self.cwd,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/subprocess.py", line 90, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1543, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-06-08 03:42:00,645] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=generate_sql_requirement, execution_date=20220608T023954, start_date=20220608T034155, end_date=20220608T034200
+[2022-06-08 03:42:00,669] {standard_task_runner.py:97} ERROR - Failed to execute job 85 for task generate_sql_requirement (Task received SIGTERM signal; 4730)
+[2022-06-08 03:42:00,716] {process_utils.py:75} INFO - Process psutil.Process(pid=4731, status='terminated', started='03:41:55') (4731) terminated with exit code None
+[2022-06-08 03:42:00,719] {process_utils.py:75} INFO - Process psutil.Process(pid=4730, status='terminated', exitcode=1, started='03:41:54') (4730) terminated with exit code 1

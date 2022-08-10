@@ -1,0 +1,41 @@
+[2022-06-08 06:21:45,441] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_table scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 06:21:45,456] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_table scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 06:21:45,457] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 06:21:45,457] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-08 06:21:45,458] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 06:21:45,477] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_order_table> on 2022-06-07 00:00:00+00:00
+[2022-06-08 06:21:45,485] {standard_task_runner.py:52} INFO - Started process 15146 to run task
+[2022-06-08 06:21:45,491] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_order_table', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfc5zwo0e', '--error-file', '/tmp/tmp3gc56pfn']
+[2022-06-08 06:21:45,493] {standard_task_runner.py:80} INFO - Job 178: Subtask drop_order_table
+[2022-06-08 06:21:45,571] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_order_table scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 06:21:45,678] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_order_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 06:21:45,692] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 06:21:45,707] {dbapi.py:208} INFO - Running statement: 
+DROP TABLE IF EXISTS order;, parameters: None
+[2022-06-08 06:21:45,713] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 188, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 212, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "order"
+LINE 2: DROP TABLE IF EXISTS order;
+                             ^
+
+[2022-06-08 06:21:45,726] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=hands_on_test, task_id=drop_order_table, execution_date=20220607T000000, start_date=20220608T062145, end_date=20220608T062145
+[2022-06-08 06:21:45,740] {standard_task_runner.py:97} ERROR - Failed to execute job 178 for task drop_order_table (syntax error at or near "order"
+LINE 2: DROP TABLE IF EXISTS order;
+                             ^
+; 15146)
+[2022-06-08 06:21:45,783] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-08 06:21:45,856] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

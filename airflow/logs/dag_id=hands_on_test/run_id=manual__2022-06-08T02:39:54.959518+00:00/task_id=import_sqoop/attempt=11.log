@@ -1,0 +1,86 @@
+[2022-06-08 04:55:19,696] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 04:55:19,713] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 04:55:19,714] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 04:55:19,715] {taskinstance.py:1357} INFO - Starting attempt 11 of 12
+[2022-06-08 04:55:19,716] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 04:55:19,748] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): import_sqoop> on 2022-06-08 02:39:54.959518+00:00
+[2022-06-08 04:55:19,759] {standard_task_runner.py:52} INFO - Started process 9439 to run task
+[2022-06-08 04:55:19,764] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'import_sqoop', 'manual__2022-06-08T02:39:54.959518+00:00', '--job-id', '119', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpse3js5am', '--error-file', '/tmp/tmpr3e7w884']
+[2022-06-08 04:55:19,766] {standard_task_runner.py:80} INFO - Job 119: Subtask import_sqoop
+[2022-06-08 04:55:19,840] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 04:55:19,947] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=import_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T02:39:54.959518+00:00
+AIRFLOW_CTX_TRY_NUMBER=11
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T02:39:54.959518+00:00
+[2022-06-08 04:55:19,949] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 04:55:19,951] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/import_sqoop.sh ']
+[2022-06-08 04:55:19,962] {subprocess.py:85} INFO - Output:
+[2022-06-08 04:55:21,537] {subprocess.py:92} INFO - 22/06/08 04:55:21 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+[2022-06-08 04:55:21,546] {subprocess.py:92} INFO - Deleted /user/sqoop
+[2022-06-08 04:55:23,995] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hbase does not exist! HBase imports will fail.
+[2022-06-08 04:55:23,996] {subprocess.py:92} INFO - Please set $HBASE_HOME to the root of your HBase installation.
+[2022-06-08 04:55:23,998] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hcatalog does not exist! HCatalog jobs will fail.
+[2022-06-08 04:55:23,998] {subprocess.py:92} INFO - Please set $HCAT_HOME to the root of your HCatalog installation.
+[2022-06-08 04:55:23,999] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../accumulo does not exist! Accumulo imports will fail.
+[2022-06-08 04:55:24,000] {subprocess.py:92} INFO - Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+[2022-06-08 04:55:24,001] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../zookeeper does not exist! Accumulo imports will fail.
+[2022-06-08 04:55:24,001] {subprocess.py:92} INFO - Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+[2022-06-08 04:55:24,558] {subprocess.py:92} INFO - 22/06/08 04:55:24 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+[2022-06-08 04:55:24,639] {subprocess.py:92} INFO - 22/06/08 04:55:24 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+[2022-06-08 04:55:24,814] {subprocess.py:92} INFO - 22/06/08 04:55:24 INFO manager.SqlManager: Using default fetchSize of 1000
+[2022-06-08 04:55:24,815] {subprocess.py:92} INFO - 22/06/08 04:55:24 INFO tool.CodeGenTool: Beginning code generation
+[2022-06-08 04:55:24,948] {subprocess.py:92} INFO - 22/06/08 04:55:24 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM "order_detail" AS t LIMIT 1
+[2022-06-08 04:55:24,983] {subprocess.py:92} INFO - 22/06/08 04:55:24 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/hadoop-2.7.4
+[2022-06-08 04:55:26,279] {subprocess.py:92} INFO - Note: /tmp/sqoop-root/compile/38f0238f84e76145fb8ebcb8f3088ab5/order_detail.java uses or overrides a deprecated API.
+[2022-06-08 04:55:26,280] {subprocess.py:92} INFO - Note: Recompile with -Xlint:deprecation for details.
+[2022-06-08 04:55:26,283] {subprocess.py:92} INFO - 22/06/08 04:55:26 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-root/compile/38f0238f84e76145fb8ebcb8f3088ab5/order_detail.jar
+[2022-06-08 04:55:26,300] {subprocess.py:92} INFO - 22/06/08 04:55:26 WARN manager.PostgresqlManager: It looks like you are importing from postgresql.
+[2022-06-08 04:55:26,301] {subprocess.py:92} INFO - 22/06/08 04:55:26 WARN manager.PostgresqlManager: This transfer can be faster! Use the --direct
+[2022-06-08 04:55:26,302] {subprocess.py:92} INFO - 22/06/08 04:55:26 WARN manager.PostgresqlManager: option to exercise a postgresql-specific fast path.
+[2022-06-08 04:55:26,310] {subprocess.py:92} INFO - 22/06/08 04:55:26 INFO mapreduce.ImportJobBase: Beginning import of order_detail
+[2022-06-08 04:55:26,464] {subprocess.py:92} INFO - 22/06/08 04:55:26 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+[2022-06-08 04:55:27,046] {subprocess.py:92} INFO - 22/06/08 04:55:27 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+[2022-06-08 04:55:27,066] {subprocess.py:92} INFO - 22/06/08 04:55:27 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+[2022-06-08 04:55:27,067] {subprocess.py:92} INFO - 22/06/08 04:55:27 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+[2022-06-08 04:55:27,156] {subprocess.py:92} INFO - 22/06/08 04:55:27 ERROR tool.ImportTool: Import failed: org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://namenode:8020/user/root/order_detail already exists
+[2022-06-08 04:55:27,157] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:146)
+[2022-06-08 04:55:27,158] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:266)
+[2022-06-08 04:55:27,158] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:139)
+[2022-06-08 04:55:27,159] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1290)
+[2022-06-08 04:55:27,160] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1287)
+[2022-06-08 04:55:27,160] {subprocess.py:92} INFO - 	at java.security.AccessController.doPrivileged(Native Method)
+[2022-06-08 04:55:27,161] {subprocess.py:92} INFO - 	at javax.security.auth.Subject.doAs(Subject.java:422)
+[2022-06-08 04:55:27,162] {subprocess.py:92} INFO - 	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1746)
+[2022-06-08 04:55:27,162] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1287)
+[2022-06-08 04:55:27,163] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1308)
+[2022-06-08 04:55:27,163] {subprocess.py:92} INFO - 	at org.apache.sqoop.mapreduce.ImportJobBase.doSubmitJob(ImportJobBase.java:200)
+[2022-06-08 04:55:27,164] {subprocess.py:92} INFO - 	at org.apache.sqoop.mapreduce.ImportJobBase.runJob(ImportJobBase.java:173)
+[2022-06-08 04:55:27,165] {subprocess.py:92} INFO - 	at org.apache.sqoop.mapreduce.ImportJobBase.runImport(ImportJobBase.java:270)
+[2022-06-08 04:55:27,166] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.SqlManager.importTable(SqlManager.java:692)
+[2022-06-08 04:55:27,166] {subprocess.py:92} INFO - 	at org.apache.sqoop.manager.PostgresqlManager.importTable(PostgresqlManager.java:127)
+[2022-06-08 04:55:27,167] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:520)
+[2022-06-08 04:55:27,168] {subprocess.py:92} INFO - 	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:628)
+[2022-06-08 04:55:27,168] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.run(Sqoop.java:147)
+[2022-06-08 04:55:27,169] {subprocess.py:92} INFO - 	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+[2022-06-08 04:55:27,170] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:183)
+[2022-06-08 04:55:27,170] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:234)
+[2022-06-08 04:55:27,171] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:243)
+[2022-06-08 04:55:27,172] {subprocess.py:92} INFO - 	at org.apache.sqoop.Sqoop.main(Sqoop.java:252)
+[2022-06-08 04:55:27,173] {subprocess.py:92} INFO - 
+[2022-06-08 04:55:27,550] {subprocess.py:92} INFO - /opt/sqoop/import_sqoop.sh: line 11: --target-dir: command not found
+[2022-06-08 04:55:27,563] {subprocess.py:96} INFO - Command exited with return code 127
+[2022-06-08 04:55:27,582] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2022-06-08 04:55:27,588] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=import_sqoop, execution_date=20220608T023954, start_date=20220608T045519, end_date=20220608T045527
+[2022-06-08 04:55:27,612] {standard_task_runner.py:97} ERROR - Failed to execute job 119 for task import_sqoop (Bash command failed. The command returned a non-zero exit code 127.; 9439)
+[2022-06-08 04:55:27,626] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-08 04:55:27,676] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

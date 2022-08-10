@@ -1,0 +1,49 @@
+[2022-06-08 04:48:46,059] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 04:48:46,082] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 04:48:46,084] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 04:48:46,086] {taskinstance.py:1357} INFO - Starting attempt 6 of 7
+[2022-06-08 04:48:46,087] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 04:48:46,119] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): import_sqoop> on 2022-06-08 02:39:54.959518+00:00
+[2022-06-08 04:48:46,128] {standard_task_runner.py:52} INFO - Started process 8934 to run task
+[2022-06-08 04:48:46,135] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'import_sqoop', 'manual__2022-06-08T02:39:54.959518+00:00', '--job-id', '108', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp9d06esia', '--error-file', '/tmp/tmpwj6j37ns']
+[2022-06-08 04:48:46,140] {standard_task_runner.py:80} INFO - Job 108: Subtask import_sqoop
+[2022-06-08 04:48:46,286] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 04:48:46,446] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=import_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T02:39:54.959518+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T02:39:54.959518+00:00
+[2022-06-08 04:48:46,448] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 04:48:46,450] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/import_sqoop.sh ']
+[2022-06-08 04:48:46,467] {subprocess.py:85} INFO - Output:
+[2022-06-08 04:48:48,386] {subprocess.py:92} INFO - 22/06/08 04:48:48 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+[2022-06-08 04:48:48,394] {subprocess.py:92} INFO - Deleted /user/sqoop
+[2022-06-08 04:48:50,814] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hbase does not exist! HBase imports will fail.
+[2022-06-08 04:48:50,815] {subprocess.py:92} INFO - Please set $HBASE_HOME to the root of your HBase installation.
+[2022-06-08 04:48:50,816] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hcatalog does not exist! HCatalog jobs will fail.
+[2022-06-08 04:48:50,817] {subprocess.py:92} INFO - Please set $HCAT_HOME to the root of your HCatalog installation.
+[2022-06-08 04:48:50,818] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../accumulo does not exist! Accumulo imports will fail.
+[2022-06-08 04:48:50,819] {subprocess.py:92} INFO - Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+[2022-06-08 04:48:50,820] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../zookeeper does not exist! Accumulo imports will fail.
+[2022-06-08 04:48:50,821] {subprocess.py:92} INFO - Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+[2022-06-08 04:48:51,435] {subprocess.py:92} INFO - 22/06/08 04:48:51 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+[2022-06-08 04:48:51,525] {subprocess.py:92} INFO - 22/06/08 04:48:51 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+[2022-06-08 04:48:51,529] {subprocess.py:92} INFO - 22/06/08 04:48:51 ERROR tool.BaseSqoopTool: Error parsing arguments for import:
+[2022-06-08 04:48:51,530] {subprocess.py:92} INFO - 22/06/08 04:48:51 ERROR tool.BaseSqoopTool: Unrecognized argument:
+[2022-06-08 04:48:51,531] {subprocess.py:92} INFO - 
+[2022-06-08 04:48:51,532] {subprocess.py:92} INFO - Try --help for usage instructions.
+[2022-06-08 04:48:51,561] {subprocess.py:96} INFO - Command exited with return code 1
+[2022-06-08 04:48:51,583] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-08 04:48:51,590] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=import_sqoop, execution_date=20220608T023954, start_date=20220608T044846, end_date=20220608T044851
+[2022-06-08 04:48:51,612] {standard_task_runner.py:97} ERROR - Failed to execute job 108 for task import_sqoop (Bash command failed. The command returned a non-zero exit code 1.; 8934)
+[2022-06-08 04:48:51,665] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-08 04:48:51,740] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

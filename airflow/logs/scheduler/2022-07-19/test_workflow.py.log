@@ -1,0 +1,28 @@
+[2022-07-19 06:06:39,214] {processor.py:153} INFO - Started process (PID=175) to work on /opt/airflow/dags/test_workflow.py
+[2022-07-19 06:06:39,216] {processor.py:641} INFO - Processing file /opt/airflow/dags/test_workflow.py for tasks to queue
+[2022-07-19 06:06:39,218] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,218] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test_workflow.py
+[2022-07-19 06:06:39,268] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,266] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_workflow.py", line 14, in <module>
+    with DAG(dag_id="test_workflow", start_date=datatime(2022,7,19),schedule_interval="@daily", default_args=default_args) as dag :
+NameError: name 'datatime' is not defined
+[2022-07-19 06:06:39,269] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/test_workflow.py
+[2022-07-19 06:06:39,311] {processor.py:161} INFO - Processing /opt/airflow/dags/test_workflow.py took 0.102 seconds
+[2022-07-19 06:07:09,442] {processor.py:153} INFO - Started process (PID=203) to work on /opt/airflow/dags/test_workflow.py
+[2022-07-19 06:07:09,445] {processor.py:641} INFO - Processing file /opt/airflow/dags/test_workflow.py for tasks to queue
+[2022-07-19 06:07:09,447] {logging_mixin.py:115} INFO - [2022-07-19 06:07:09,447] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/test_workflow.py
+[2022-07-19 06:07:09,464] {logging_mixin.py:115} INFO - [2022-07-19 06:07:09,462] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/test_workflow.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_workflow.py", line 14, in <module>
+    with DAG(dag_id="test_workflow", start_date=datatime(2022,7,19),schedule_interval="@daily", default_args=default_args) as dag :
+NameError: name 'datatime' is not defined
+[2022-07-19 06:07:09,466] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/test_workflow.py
+[2022-07-19 06:07:09,504] {processor.py:161} INFO - Processing /opt/airflow/dags/test_workflow.py took 0.069 seconds

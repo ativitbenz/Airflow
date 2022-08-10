@@ -1,0 +1,7 @@
+[2022-06-14 09:41:49,001] {processor.py:153} INFO - Started process (PID=178) to work on /opt/airflow/dags/dag.py
+[2022-06-14 09:41:49,003] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-06-14 09:41:49,006] {logging_mixin.py:115} INFO - [2022-06-14 09:41:49,006] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-06-14 09:41:49,210] {processor.py:651} INFO - DAG(s) dict_keys(['hands_on_test']) retrieved from /opt/airflow/dags/dag.py
+[2022-06-14 09:41:49,518] {logging_mixin.py:115} INFO - [2022-06-14 09:41:49,517] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-06-14 09:41:49,597] {logging_mixin.py:115} INFO - [2022-06-14 09:41:49,596] {dag.py:2919} INFO - Setting next_dagrun for hands_on_test to 2022-06-13T00:00:00+00:00, run_after=2022-06-14T00:00:00+00:00
+[2022-06-14 09:41:49,655] {processor.py:161} INFO - Processing /opt/airflow/dags/dag.py took 0.662 seconds

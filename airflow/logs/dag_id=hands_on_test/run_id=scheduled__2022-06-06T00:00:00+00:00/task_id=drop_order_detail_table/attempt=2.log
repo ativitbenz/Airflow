@@ -1,0 +1,61 @@
+[2022-06-07 02:40:31,595] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:40:31,614] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:40:31,616] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:40:31,617] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-07 02:40:31,620] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:40:31,643] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_order_detail_table> on 2022-06-06 00:00:00+00:00
+[2022-06-07 02:40:31,653] {standard_task_runner.py:52} INFO - Started process 478 to run task
+[2022-06-07 02:40:31,660] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_order_detail_table', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5eo8fcnk', '--error-file', '/tmp/tmpri4u82j7']
+[2022-06-07 02:40:31,663] {standard_task_runner.py:80} INFO - Job 13: Subtask drop_order_detail_table
+[2022-06-07 02:40:31,746] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_order_detail_table scheduled__2022-06-06T00:00:00+00:00 [running]> on host 078df8b61ea1
+[2022-06-07 02:40:31,867] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_order_detail_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 02:40:31,886] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 02:40:31,900] {dbapi.py:208} INFO - Running statement: 
+DROP TABLE IF EXISTS order_detail;, parameters: None
+[2022-06-07 02:40:31,930] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=drop_order_detail_table, execution_date=20220606T000000, start_date=20220607T024031, end_date=20220607T024031
+[2022-06-07 02:40:31,953] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 02:40:32,037] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-07 02:57:18,166] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:57:18,183] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:57:18,184] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:57:18,185] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-07 02:57:18,186] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:57:18,206] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_order_detail_table> on 2022-06-06 00:00:00+00:00
+[2022-06-07 02:57:18,213] {standard_task_runner.py:52} INFO - Started process 445 to run task
+[2022-06-07 02:57:18,221] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_order_detail_table', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpk5qi6mch', '--error-file', '/tmp/tmpmm0h9aec']
+[2022-06-07 02:57:18,226] {standard_task_runner.py:80} INFO - Job 5: Subtask drop_order_detail_table
+[2022-06-07 02:57:18,323] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_order_detail_table scheduled__2022-06-06T00:00:00+00:00 [running]> on host 90bb19738779
+[2022-06-07 02:57:18,438] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_order_detail_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 02:57:18,687] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_db` isn't defined
+[2022-06-07 02:57:18,694] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=hands_on_test, task_id=drop_order_detail_table, execution_date=20220606T000000, start_date=20220607T025718, end_date=20220607T025718
+[2022-06-07 02:57:18,920] {standard_task_runner.py:97} ERROR - Failed to execute job 5 for task drop_order_detail_table (The conn_id `postgres_db` isn't defined; 445)
+[2022-06-07 02:57:18,956] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 02:57:19,025] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,124 @@
+[2022-06-07 02:37:30,627] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:37:30,641] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:37:30,642] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:37:30,643] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 02:37:30,644] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:37:30,664] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_restaurant_detail_table> on 2022-06-06 00:00:00+00:00
+[2022-06-07 02:37:30,669] {standard_task_runner.py:52} INFO - Started process 280 to run task
+[2022-06-07 02:37:30,675] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_restaurant_detail_table', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfml7e8iv', '--error-file', '/tmp/tmpvi4gzu3m']
+[2022-06-07 02:37:30,678] {standard_task_runner.py:80} INFO - Job 3: Subtask drop_restaurant_detail_table
+[2022-06-07 02:37:30,755] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [running]> on host 078df8b61ea1
+[2022-06-07 02:37:30,857] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_restaurant_detail_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 02:37:30,904] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_db` isn't defined
+[2022-06-07 02:37:30,910] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=drop_restaurant_detail_table, execution_date=20220606T000000, start_date=20220607T023730, end_date=20220607T023730
+[2022-06-07 02:37:30,924] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task drop_restaurant_detail_table (The conn_id `postgres_db` isn't defined; 280)
+[2022-06-07 02:37:30,970] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 02:37:31,033] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-07 02:54:16,895] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:54:16,911] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:54:16,912] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:54:16,916] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 02:54:16,917] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:54:16,939] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_restaurant_detail_table> on 2022-06-06 00:00:00+00:00
+[2022-06-07 02:54:16,945] {standard_task_runner.py:52} INFO - Started process 265 to run task
+[2022-06-07 02:54:16,950] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_restaurant_detail_table', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqyx66vby', '--error-file', '/tmp/tmpuo1ahm0u']
+[2022-06-07 02:54:16,952] {standard_task_runner.py:80} INFO - Job 3: Subtask drop_restaurant_detail_table
+[2022-06-07 02:54:17,035] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [running]> on host 90bb19738779
+[2022-06-07 02:54:17,135] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_restaurant_detail_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 02:54:17,331] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 86, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_db` isn't defined
+[2022-06-07 02:54:17,338] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=drop_restaurant_detail_table, execution_date=20220606T000000, start_date=20220607T025416, end_date=20220607T025417
+[2022-06-07 02:54:17,562] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task drop_restaurant_detail_table (The conn_id `postgres_db` isn't defined; 265)
+[2022-06-07 02:54:17,605] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 02:54:17,681] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-07 09:24:46,268] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 09:24:46,281] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 09:24:46,283] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 09:24:46,283] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 09:24:46,284] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 09:24:46,302] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_restaurant_detail_table> on 2022-06-06 00:00:00+00:00
+[2022-06-07 09:24:46,308] {standard_task_runner.py:52} INFO - Started process 18082 to run task
+[2022-06-07 09:24:46,313] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_restaurant_detail_table', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp73kwhkm3', '--error-file', '/tmp/tmpbjs3nyej']
+[2022-06-07 09:24:46,317] {standard_task_runner.py:80} INFO - Job 76: Subtask drop_restaurant_detail_table
+[2022-06-07 09:24:46,394] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [running]> on host a4a1e1d603db
+[2022-06-07 09:24:46,510] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_restaurant_detail_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 09:24:46,525] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 09:24:46,539] {dbapi.py:208} INFO - Running statement: 
+DROP TABLE IF EXISTS restaurant_detail;, parameters: None
+[2022-06-07 09:24:46,576] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=drop_restaurant_detail_table, execution_date=20220606T000000, start_date=20220607T092446, end_date=20220607T092446
+[2022-06-07 09:24:46,610] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 09:24:46,718] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-07 10:32:17,625] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 10:32:17,643] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 10:32:17,644] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:32:17,645] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 10:32:17,646] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:32:17,666] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_restaurant_detail_table> on 2022-06-06 00:00:00+00:00
+[2022-06-07 10:32:17,672] {standard_task_runner.py:52} INFO - Started process 255 to run task
+[2022-06-07 10:32:17,679] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_restaurant_detail_table', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpowm1e830', '--error-file', '/tmp/tmptka5ufhi']
+[2022-06-07 10:32:17,683] {standard_task_runner.py:80} INFO - Job 2: Subtask drop_restaurant_detail_table
+[2022-06-07 10:32:17,774] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_restaurant_detail_table scheduled__2022-06-06T00:00:00+00:00 [running]> on host a91a90e971c8
+[2022-06-07 10:32:17,905] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_restaurant_detail_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 10:32:17,923] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 10:32:17,948] {dbapi.py:208} INFO - Running statement: 
+DROP TABLE IF EXISTS restaurant_detail;, parameters: None
+[2022-06-07 10:32:17,953] {postgres.py:94} INFO - NOTICE:  table "restaurant_detail" does not exist, skipping
+
+[2022-06-07 10:32:18,007] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=drop_restaurant_detail_table, execution_date=20220606T000000, start_date=20220607T103217, end_date=20220607T103218
+[2022-06-07 10:32:18,055] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 10:32:18,144] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

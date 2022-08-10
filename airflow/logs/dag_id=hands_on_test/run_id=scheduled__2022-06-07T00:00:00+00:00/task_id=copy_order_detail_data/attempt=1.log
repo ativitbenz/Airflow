@@ -1,0 +1,78 @@
+[2022-06-08 02:39:56,283] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 02:39:56,318] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 02:39:56,319] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 02:39:56,320] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 02:39:56,320] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 02:39:56,343] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_order_detail_data> on 2022-06-07 00:00:00+00:00
+[2022-06-08 02:39:56,353] {standard_task_runner.py:52} INFO - Started process 312 to run task
+[2022-06-08 02:39:56,367] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_order_detail_data', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqsuipuwg', '--error-file', '/tmp/tmppmjymv20']
+[2022-06-08 02:39:56,371] {standard_task_runner.py:80} INFO - Job 7: Subtask copy_order_detail_data
+[2022-06-08 02:39:56,529] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 02:39:56,774] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_order_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 02:39:56,868] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 02:39:56,913] {dbapi.py:208} INFO - Running statement: 
+COPY order_detail FROM '/var/lib/postgresql/data/lmwn/order_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-08 02:40:03,829] {dbapi.py:216} INFO - Rows affected: 395361
+[2022-06-08 02:40:03,851] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_order_detail_data, execution_date=20220607T000000, start_date=20220608T023956, end_date=20220608T024003
+[2022-06-08 02:40:03,882] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 02:40:03,947] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-08 05:17:02,207] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 05:17:02,225] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 05:17:02,226] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 05:17:02,227] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 05:17:02,228] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 05:17:02,250] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_order_detail_data> on 2022-06-07 00:00:00+00:00
+[2022-06-08 05:17:02,257] {standard_task_runner.py:52} INFO - Started process 11011 to run task
+[2022-06-08 05:17:02,263] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_order_detail_data', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '148', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkajk80mx', '--error-file', '/tmp/tmpyjdl3972']
+[2022-06-08 05:17:02,269] {standard_task_runner.py:80} INFO - Job 148: Subtask copy_order_detail_data
+[2022-06-08 05:17:02,369] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 05:17:02,540] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_order_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 05:17:02,595] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 05:17:02,610] {dbapi.py:208} INFO - Running statement: 
+COPY order_detail FROM '/var/lib/postgresql/data/lmwn/order_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-08 05:17:07,366] {dbapi.py:216} INFO - Rows affected: 395361
+[2022-06-08 05:17:07,386] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_order_detail_data, execution_date=20220607T000000, start_date=20220608T051702, end_date=20220608T051707
+[2022-06-08 05:17:07,440] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 05:17:07,503] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-08 06:18:48,933] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 06:18:48,977] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 06:18:48,978] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 06:18:48,979] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 06:18:48,979] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 06:18:49,033] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_order_detail_data> on 2022-06-07 00:00:00+00:00
+[2022-06-08 06:18:49,046] {standard_task_runner.py:52} INFO - Started process 14965 to run task
+[2022-06-08 06:18:49,068] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_order_detail_data', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpiw_8q58q', '--error-file', '/tmp/tmp0lpafh5i']
+[2022-06-08 06:18:49,080] {standard_task_runner.py:80} INFO - Job 172: Subtask copy_order_detail_data
+[2022-06-08 06:18:49,279] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_order_detail_data scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 06:18:49,481] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_order_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 06:18:49,516] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 06:18:49,541] {dbapi.py:208} INFO - Running statement: 
+COPY order_detail FROM '/var/lib/postgresql/data/lmwn/order_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-08 06:18:54,336] {dbapi.py:216} INFO - Rows affected: 395361
+[2022-06-08 06:18:54,363] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_order_detail_data, execution_date=20220607T000000, start_date=20220608T061848, end_date=20220608T061854
+[2022-06-08 06:18:54,400] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 06:18:54,452] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

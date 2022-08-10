@@ -1,0 +1,26 @@
+[2022-06-10 07:01:32,592] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data manual__2022-06-10T06:57:39.204816+00:00 [queued]>
+[2022-06-10 07:01:32,606] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_restaurant_detail_data manual__2022-06-10T06:57:39.204816+00:00 [queued]>
+[2022-06-10 07:01:32,607] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 07:01:32,608] {taskinstance.py:1357} INFO - Starting attempt 3 of 4
+[2022-06-10 07:01:32,609] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 07:01:32,628] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): copy_restaurant_detail_data> on 2022-06-10 06:57:39.204816+00:00
+[2022-06-10 07:01:32,635] {standard_task_runner.py:52} INFO - Started process 646 to run task
+[2022-06-10 07:01:32,640] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_restaurant_detail_data', 'manual__2022-06-10T06:57:39.204816+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp1ugvzh5d', '--error-file', '/tmp/tmpszk3t6x_']
+[2022-06-10 07:01:32,642] {standard_task_runner.py:80} INFO - Job 32: Subtask copy_restaurant_detail_data
+[2022-06-10 07:01:32,718] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_restaurant_detail_data manual__2022-06-10T06:57:39.204816+00:00 [running]> on host a0fd966c00bf
+[2022-06-10 07:01:32,820] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_restaurant_detail_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-10T06:57:39.204816+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-10T06:57:39.204816+00:00
+[2022-06-10 07:01:32,833] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-10 07:01:32,847] {dbapi.py:208} INFO - Running statement: 
+COPY restaurant_detail FROM '/var/lib/postgresql/data/lmwn/restaurant_detail.csv' DELIMITER ',' CSV HEADER;, parameters: None
+[2022-06-10 07:01:32,937] {dbapi.py:216} INFO - Rows affected: 12623
+[2022-06-10 07:01:32,958] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=copy_restaurant_detail_data, execution_date=20220610T065739, start_date=20220610T070132, end_date=20220610T070132
+[2022-06-10 07:01:33,013] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-10 07:01:33,083] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

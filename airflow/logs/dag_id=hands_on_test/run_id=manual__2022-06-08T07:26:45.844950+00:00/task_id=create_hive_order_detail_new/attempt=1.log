@@ -1,0 +1,320 @@
+[2022-06-08 10:31:38,706] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_order_detail_new manual__2022-06-08T07:26:45.844950+00:00 [queued]>
+[2022-06-08 10:31:38,721] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_order_detail_new manual__2022-06-08T07:26:45.844950+00:00 [queued]>
+[2022-06-08 10:31:38,723] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 10:31:38,724] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 10:31:38,725] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 10:31:38,748] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): create_hive_order_detail_new> on 2022-06-08 07:26:45.844950+00:00
+[2022-06-08 10:31:38,757] {standard_task_runner.py:52} INFO - Started process 30602 to run task
+[2022-06-08 10:31:38,765] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_hive_order_detail_new', 'manual__2022-06-08T07:26:45.844950+00:00', '--job-id', '239', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpph0x9kuy', '--error-file', '/tmp/tmph7d83rya']
+[2022-06-08 10:31:38,768] {standard_task_runner.py:80} INFO - Job 239: Subtask create_hive_order_detail_new
+[2022-06-08 10:31:38,851] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_hive_order_detail_new manual__2022-06-08T07:26:45.844950+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 10:31:39,035] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_hive_order_detail_new
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T07:26:45.844950+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T07:26:45.844950+00:00
+[2022-06-08 10:31:39,040] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 10:31:39,042] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server hive -f /opt/hql/order_detail_new.hql ']
+[2022-06-08 10:31:39,061] {subprocess.py:85} INFO - Output:
+[2022-06-08 10:31:43,405] {subprocess.py:92} INFO - SLF4J: Class path contains multiple SLF4J bindings.
+[2022-06-08 10:31:43,406] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-08 10:31:43,407] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-08 10:31:43,408] {subprocess.py:92} INFO - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[2022-06-08 10:31:43,415] {subprocess.py:92} INFO - SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+[2022-06-08 10:31:45,702] {subprocess.py:92} INFO - 
+[2022-06-08 10:31:45,703] {subprocess.py:92} INFO - Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+[2022-06-08 10:31:53,099] {subprocess.py:92} INFO - OK
+[2022-06-08 10:31:53,103] {subprocess.py:92} INFO - Time taken: 4.902 seconds
+[2022-06-08 10:31:53,494] {subprocess.py:92} INFO - OK
+[2022-06-08 10:31:53,495] {subprocess.py:92} INFO - Time taken: 0.389 seconds
+[2022-06-08 10:31:56,163] {subprocess.py:92} INFO - OK
+[2022-06-08 10:31:56,181] {subprocess.py:92} INFO - Partitions not in metastore:	order_detail_new:dt=20190101	order_detail_new:dt=20190102	order_detail_new:dt=20190103	order_detail_new:dt=20190104	order_detail_new:dt=20190105	order_detail_new:dt=20190106	order_detail_new:dt=20190107	order_detail_new:dt=20190108	order_detail_new:dt=20190109	order_detail_new:dt=20190110	order_detail_new:dt=20190111	order_detail_new:dt=20190112	order_detail_new:dt=20190113	order_detail_new:dt=20190114	order_detail_new:dt=20190115	order_detail_new:dt=20190116	order_detail_new:dt=20190117	order_detail_new:dt=20190118	order_detail_new:dt=20190119	order_detail_new:dt=20190120	order_detail_new:dt=20190121	order_detail_new:dt=20190122	order_detail_new:dt=20190123	order_detail_new:dt=20190124	order_detail_new:dt=20190125	order_detail_new:dt=20190126	order_detail_new:dt=20190127	order_detail_new:dt=20190128	order_detail_new:dt=20190129	order_detail_new:dt=20190130	order_detail_new:dt=20190131	order_detail_new:dt=20190201	order_detail_new:dt=20190202	order_detail_new:dt=20190203	order_detail_new:dt=20190204	order_detail_new:dt=20190205	order_detail_new:dt=20190206	order_detail_new:dt=20190207	order_detail_new:dt=20190208	order_detail_new:dt=20190209	order_detail_new:dt=20190210	order_detail_new:dt=20190211	order_detail_new:dt=20190212	order_detail_new:dt=20190213	order_detail_new:dt=20190214	order_detail_new:dt=20190215	order_detail_new:dt=20190216	order_detail_new:dt=20190217	order_detail_new:dt=20190218	order_detail_new:dt=20190219	order_detail_new:dt=20190220	order_detail_new:dt=20190221	order_detail_new:dt=20190222	order_detail_new:dt=20190223	order_detail_new:dt=20190224	order_detail_new:dt=20190225	order_detail_new:dt=20190226	order_detail_new:dt=20190227	order_detail_new:dt=20190228	order_detail_new:dt=20190301	order_detail_new:dt=20190302	order_detail_new:dt=20190303	order_detail_new:dt=20190304	order_detail_new:dt=20190305	order_detail_new:dt=20190306	order_detail_new:dt=20190307	order_detail_new:dt=20190308	order_detail_new:dt=20190309	order_detail_new:dt=20190310	order_detail_new:dt=20190311	order_detail_new:dt=20190312	order_detail_new:dt=20190313	order_detail_new:dt=20190314	order_detail_new:dt=20190315	order_detail_new:dt=20190316	order_detail_new:dt=20190317	order_detail_new:dt=20190318	order_detail_new:dt=20190319	order_detail_new:dt=20190320	order_detail_new:dt=20190321	order_detail_new:dt=20190322	order_detail_new:dt=20190323	order_detail_new:dt=20190324	order_detail_new:dt=20190325	order_detail_new:dt=20190326	order_detail_new:dt=20190327	order_detail_new:dt=20190328	order_detail_new:dt=20190329	order_detail_new:dt=20190330	order_detail_new:dt=20190331	order_detail_new:dt=20190401	order_detail_new:dt=20190402	order_detail_new:dt=20190403	order_detail_new:dt=20190404	order_detail_new:dt=20190405	order_detail_new:dt=20190406	order_detail_new:dt=20190407	order_detail_new:dt=20190408	order_detail_new:dt=20190409	order_detail_new:dt=20190410	order_detail_new:dt=20190411	order_detail_new:dt=20190412	order_detail_new:dt=20190413	order_detail_new:dt=20190414	order_detail_new:dt=20190415	order_detail_new:dt=20190416	order_detail_new:dt=20190417	order_detail_new:dt=20190418	order_detail_new:dt=20190419	order_detail_new:dt=20190420	order_detail_new:dt=20190421	order_detail_new:dt=20190422	order_detail_new:dt=20190423	order_detail_new:dt=20190424	order_detail_new:dt=20190425	order_detail_new:dt=20190426	order_detail_new:dt=20190427	order_detail_new:dt=20190428	order_detail_new:dt=20190429	order_detail_new:dt=20190430	order_detail_new:dt=20190501	order_detail_new:dt=20190502	order_detail_new:dt=20190503	order_detail_new:dt=20190504	order_detail_new:dt=20190505	order_detail_new:dt=20190506	order_detail_new:dt=20190507	order_detail_new:dt=20190508	order_detail_new:dt=20190509	order_detail_new:dt=20190510	order_detail_new:dt=20190511	order_detail_new:dt=20190512	order_detail_new:dt=20190513	order_detail_new:dt=20190514	order_detail_new:dt=20190515	order_detail_new:dt=20190516	order_detail_new:dt=20190517	order_detail_new:dt=20190518	order_detail_new:dt=20190519	order_detail_new:dt=20190520	order_detail_new:dt=20190521	order_detail_new:dt=20190522	order_detail_new:dt=20190523	order_detail_new:dt=20190524	order_detail_new:dt=20190525	order_detail_new:dt=20190526	order_detail_new:dt=20190527	order_detail_new:dt=20190528	order_detail_new:dt=20190529	order_detail_new:dt=20190530	order_detail_new:dt=20190531	order_detail_new:dt=20190601	order_detail_new:dt=20190602	order_detail_new:dt=20190603	order_detail_new:dt=20190604	order_detail_new:dt=20190605	order_detail_new:dt=20190606	order_detail_new:dt=20190607	order_detail_new:dt=20190608	order_detail_new:dt=20190609	order_detail_new:dt=20190610	order_detail_new:dt=20190611	order_detail_new:dt=20190612	order_detail_new:dt=20190613	order_detail_new:dt=20190614	order_detail_new:dt=20190615	order_detail_new:dt=20190616	order_detail_new:dt=20190617	order_detail_new:dt=20190618	order_detail_new:dt=20190619	order_detail_new:dt=20190620	order_detail_new:dt=20190621	order_detail_new:dt=20190622	order_detail_new:dt=20190623	order_detail_new:dt=20190624	order_detail_new:dt=20190625	order_detail_new:dt=20190626	order_detail_new:dt=20190627	order_detail_new:dt=20190628	order_detail_new:dt=20190629
+[2022-06-08 10:31:56,183] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190101
+[2022-06-08 10:31:56,184] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190102
+[2022-06-08 10:31:56,184] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190103
+[2022-06-08 10:31:56,185] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190104
+[2022-06-08 10:31:56,186] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190105
+[2022-06-08 10:31:56,187] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190106
+[2022-06-08 10:31:56,188] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190107
+[2022-06-08 10:31:56,189] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190108
+[2022-06-08 10:31:56,190] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190109
+[2022-06-08 10:31:56,191] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190110
+[2022-06-08 10:31:56,192] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190111
+[2022-06-08 10:31:56,193] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190112
+[2022-06-08 10:31:56,194] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190113
+[2022-06-08 10:31:56,194] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190114
+[2022-06-08 10:31:56,195] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190115
+[2022-06-08 10:31:56,196] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190116
+[2022-06-08 10:31:56,197] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190117
+[2022-06-08 10:31:56,197] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190118
+[2022-06-08 10:31:56,198] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190119
+[2022-06-08 10:31:56,199] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190120
+[2022-06-08 10:31:56,200] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190121
+[2022-06-08 10:31:56,201] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190122
+[2022-06-08 10:31:56,202] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190123
+[2022-06-08 10:31:56,202] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190124
+[2022-06-08 10:31:56,203] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190125
+[2022-06-08 10:31:56,203] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190126
+[2022-06-08 10:31:56,204] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190127
+[2022-06-08 10:31:56,205] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190128
+[2022-06-08 10:31:56,205] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190129
+[2022-06-08 10:31:56,206] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190130
+[2022-06-08 10:31:56,208] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190131
+[2022-06-08 10:31:56,209] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190201
+[2022-06-08 10:31:56,209] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190202
+[2022-06-08 10:31:56,210] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190203
+[2022-06-08 10:31:56,211] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190204
+[2022-06-08 10:31:56,212] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190205
+[2022-06-08 10:31:56,213] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190206
+[2022-06-08 10:31:56,213] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190207
+[2022-06-08 10:31:56,215] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190208
+[2022-06-08 10:31:56,215] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190209
+[2022-06-08 10:31:56,216] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190210
+[2022-06-08 10:31:56,217] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190211
+[2022-06-08 10:31:56,218] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190212
+[2022-06-08 10:31:56,219] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190213
+[2022-06-08 10:31:56,220] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190214
+[2022-06-08 10:31:56,220] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190215
+[2022-06-08 10:31:56,221] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190216
+[2022-06-08 10:31:56,222] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190217
+[2022-06-08 10:31:56,223] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190218
+[2022-06-08 10:31:56,224] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190219
+[2022-06-08 10:31:56,225] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190220
+[2022-06-08 10:31:56,225] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190221
+[2022-06-08 10:31:56,226] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190222
+[2022-06-08 10:31:56,227] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190223
+[2022-06-08 10:31:56,228] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190224
+[2022-06-08 10:31:56,229] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190225
+[2022-06-08 10:31:56,229] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190226
+[2022-06-08 10:31:56,230] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190227
+[2022-06-08 10:31:56,231] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190228
+[2022-06-08 10:31:56,232] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190301
+[2022-06-08 10:31:56,233] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190302
+[2022-06-08 10:31:56,234] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190303
+[2022-06-08 10:31:56,235] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190304
+[2022-06-08 10:31:56,235] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190305
+[2022-06-08 10:31:56,236] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190306
+[2022-06-08 10:31:56,238] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190307
+[2022-06-08 10:31:56,239] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190308
+[2022-06-08 10:31:56,240] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190309
+[2022-06-08 10:31:56,241] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190310
+[2022-06-08 10:31:56,241] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190311
+[2022-06-08 10:31:56,242] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190312
+[2022-06-08 10:31:56,243] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190313
+[2022-06-08 10:31:56,244] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190314
+[2022-06-08 10:31:56,245] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190315
+[2022-06-08 10:31:56,245] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190316
+[2022-06-08 10:31:56,247] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190317
+[2022-06-08 10:31:56,247] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190318
+[2022-06-08 10:31:56,248] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190319
+[2022-06-08 10:31:56,249] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190320
+[2022-06-08 10:31:56,249] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190321
+[2022-06-08 10:31:56,252] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190322
+[2022-06-08 10:31:56,253] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190323
+[2022-06-08 10:31:56,254] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190324
+[2022-06-08 10:31:56,254] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190325
+[2022-06-08 10:31:56,255] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190326
+[2022-06-08 10:31:56,256] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190327
+[2022-06-08 10:31:56,257] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190328
+[2022-06-08 10:31:56,258] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190329
+[2022-06-08 10:31:56,259] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190330
+[2022-06-08 10:31:56,259] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190331
+[2022-06-08 10:31:56,260] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190401
+[2022-06-08 10:31:56,261] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190402
+[2022-06-08 10:31:56,262] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190403
+[2022-06-08 10:31:56,263] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190404
+[2022-06-08 10:31:56,263] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190405
+[2022-06-08 10:31:56,264] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190406
+[2022-06-08 10:31:56,265] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190407
+[2022-06-08 10:31:56,265] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190408
+[2022-06-08 10:31:56,266] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190409
+[2022-06-08 10:31:56,267] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190410
+[2022-06-08 10:31:56,268] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190411
+[2022-06-08 10:31:56,269] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190412
+[2022-06-08 10:31:56,269] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190413
+[2022-06-08 10:31:56,270] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190414
+[2022-06-08 10:31:56,271] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190415
+[2022-06-08 10:31:56,271] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190416
+[2022-06-08 10:31:56,272] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190417
+[2022-06-08 10:31:56,273] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190418
+[2022-06-08 10:31:56,274] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190419
+[2022-06-08 10:31:56,274] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190420
+[2022-06-08 10:31:56,275] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190421
+[2022-06-08 10:31:56,276] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190422
+[2022-06-08 10:31:56,277] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190423
+[2022-06-08 10:31:56,277] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190424
+[2022-06-08 10:31:56,281] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190425
+[2022-06-08 10:31:56,282] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190426
+[2022-06-08 10:31:56,283] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190427
+[2022-06-08 10:31:56,283] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190428
+[2022-06-08 10:31:56,284] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190429
+[2022-06-08 10:31:56,285] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190430
+[2022-06-08 10:31:56,286] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190501
+[2022-06-08 10:31:56,287] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190502
+[2022-06-08 10:31:56,288] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190503
+[2022-06-08 10:31:56,289] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190504
+[2022-06-08 10:31:56,289] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190505
+[2022-06-08 10:31:56,290] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190506
+[2022-06-08 10:31:56,291] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190507
+[2022-06-08 10:31:56,291] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190508
+[2022-06-08 10:31:56,292] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190509
+[2022-06-08 10:31:56,293] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190510
+[2022-06-08 10:31:56,293] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190511
+[2022-06-08 10:31:56,294] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190512
+[2022-06-08 10:31:56,295] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190513
+[2022-06-08 10:31:56,296] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190514
+[2022-06-08 10:31:56,297] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190515
+[2022-06-08 10:31:56,300] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190516
+[2022-06-08 10:31:56,317] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190517
+[2022-06-08 10:31:56,352] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190518
+[2022-06-08 10:31:56,353] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190519
+[2022-06-08 10:31:56,354] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190520
+[2022-06-08 10:31:56,355] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190521
+[2022-06-08 10:31:56,356] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190522
+[2022-06-08 10:31:56,372] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190523
+[2022-06-08 10:31:56,373] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190524
+[2022-06-08 10:31:56,374] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190525
+[2022-06-08 10:31:56,374] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190526
+[2022-06-08 10:31:56,375] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190527
+[2022-06-08 10:31:56,376] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190528
+[2022-06-08 10:31:56,377] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190529
+[2022-06-08 10:31:56,378] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190530
+[2022-06-08 10:31:56,379] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190531
+[2022-06-08 10:31:56,380] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190601
+[2022-06-08 10:31:56,380] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190602
+[2022-06-08 10:31:56,381] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190603
+[2022-06-08 10:31:56,382] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190604
+[2022-06-08 10:31:56,382] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190605
+[2022-06-08 10:31:56,383] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190606
+[2022-06-08 10:31:56,384] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190607
+[2022-06-08 10:31:56,385] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190608
+[2022-06-08 10:31:56,385] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190609
+[2022-06-08 10:31:56,386] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190610
+[2022-06-08 10:31:56,387] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190611
+[2022-06-08 10:31:56,388] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190612
+[2022-06-08 10:31:56,389] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190613
+[2022-06-08 10:31:56,390] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190614
+[2022-06-08 10:31:56,391] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190615
+[2022-06-08 10:31:56,392] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190616
+[2022-06-08 10:31:56,392] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190617
+[2022-06-08 10:31:56,393] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190618
+[2022-06-08 10:31:56,395] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190619
+[2022-06-08 10:31:56,395] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190620
+[2022-06-08 10:31:56,396] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190621
+[2022-06-08 10:31:56,398] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190622
+[2022-06-08 10:31:56,398] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190623
+[2022-06-08 10:31:56,399] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190624
+[2022-06-08 10:31:56,400] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190625
+[2022-06-08 10:31:56,401] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190626
+[2022-06-08 10:31:56,402] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190627
+[2022-06-08 10:31:56,404] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190628
+[2022-06-08 10:31:56,406] {subprocess.py:92} INFO - Repair: Added partition to metastore order_detail_new:dt=20190629
+[2022-06-08 10:31:56,407] {subprocess.py:92} INFO - Time taken: 2.65 seconds, Fetched: 181 row(s)
+[2022-06-08 10:32:01,866] {subprocess.py:92} INFO - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+[2022-06-08 10:32:01,887] {subprocess.py:92} INFO - Query ID = root_20220608103156_7f522066-32b3-4fbd-9dab-1355c592b978
+[2022-06-08 10:32:01,888] {subprocess.py:92} INFO - Total jobs = 1
+[2022-06-08 10:32:01,980] {subprocess.py:92} INFO - Launching Job 1 out of 1
+[2022-06-08 10:32:02,006] {subprocess.py:92} INFO - Number of reduce tasks determined at compile time: 1
+[2022-06-08 10:32:02,008] {subprocess.py:92} INFO - In order to change the average load for a reducer (in bytes):
+[2022-06-08 10:32:02,009] {subprocess.py:92} INFO -   set hive.exec.reducers.bytes.per.reducer=<number>
+[2022-06-08 10:32:02,012] {subprocess.py:92} INFO - In order to limit the maximum number of reducers:
+[2022-06-08 10:32:02,016] {subprocess.py:92} INFO -   set hive.exec.reducers.max=<number>
+[2022-06-08 10:32:02,018] {subprocess.py:92} INFO - In order to set a constant number of reducers:
+[2022-06-08 10:32:02,023] {subprocess.py:92} INFO -   set mapreduce.job.reduces=<number>
+[2022-06-08 10:32:06,060] {subprocess.py:92} INFO - Job running in-process (local Hadoop)
+[2022-06-08 10:32:06,572] {subprocess.py:92} INFO - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2022-06-08 10:32:06,573] {subprocess.py:92} INFO - SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2022-06-08 10:32:06,575] {subprocess.py:92} INFO - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2022-06-08 10:32:07,094] {subprocess.py:92} INFO - 2022-06-08 10:32:07,084 Stage-1 map = 0%,  reduce = 0%
+[2022-06-08 10:32:13,112] {subprocess.py:92} INFO - 2022-06-08 10:32:13,112 Stage-1 map = 23%,  reduce = 0%
+[2022-06-08 10:32:16,122] {subprocess.py:92} INFO - 2022-06-08 10:32:16,121 Stage-1 map = 48%,  reduce = 0%
+[2022-06-08 10:32:17,143] {subprocess.py:92} INFO - 2022-06-08 10:32:17,143 Stage-1 map = 100%,  reduce = 100%
+[2022-06-08 10:32:17,154] {subprocess.py:92} INFO - Ended Job = job_local239761461_0001
+[2022-06-08 10:32:17,171] {subprocess.py:92} INFO - MapReduce Jobs Launched:
+[2022-06-08 10:32:17,172] {subprocess.py:92} INFO - Stage-Stage-1:  HDFS Read: 104099276 HDFS Write: 0 SUCCESS
+[2022-06-08 10:32:17,173] {subprocess.py:92} INFO - Total MapReduce CPU Time Spent: 0 msec
+[2022-06-08 10:32:17,174] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:17,205] {subprocess.py:92} INFO - 395361
+[2022-06-08 10:32:17,207] {subprocess.py:92} INFO - Time taken: 20.898 seconds, Fetched: 1 row(s)
+[2022-06-08 10:32:17,530] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:17,582] {subprocess.py:92} INFO - 2019-01-01 00:46:15	COMPLETED	126	100.0	100.0	f180ff7b-deef-40b5-ad2b-0d53ae3176d8	8ec7c14f-3979-43ab-9dba-79c81fb7e8b8	b8a38f0b-4f31-4fa9-9863-e2024936da6f	R_48459	20190101
+[2022-06-08 10:32:17,583] {subprocess.py:92} INFO - 2019-01-01 14:38:20	COMPLETED	384	50.0	50.0	f3e4e880-3cff-4086-aa37-2d6fcef38dc7	8ec7c14f-3979-43ab-9dba-79c81fb7e8b8	3fc2bf85-1790-4dac-9e94-b4994331217f	R_48012	20190101
+[2022-06-08 10:32:17,584] {subprocess.py:92} INFO - 2019-01-01 12:07:59	COMPLETED	118	50.0	50.0	02e1a3f7-325f-4d9b-9c15-497d76d77eb9	8ee9787a-0681-48c4-8360-15986ad395bf	2f6a9a35-c969-4701-b735-008687a8f763	R_68179	20190101
+[2022-06-08 10:32:17,584] {subprocess.py:92} INFO - 2019-01-01 15:43:25	COMPLETED	186	NULL	0.0	fabff181-4493-452e-8b71-8a603f3cc0d3	8f066c17-cc7d-4f11-80d5-600de9d9f4b0	52b20be4-541f-44d3-8506-ee1d3cc2c0d1	R_49122	20190101
+[2022-06-08 10:32:17,585] {subprocess.py:92} INFO - 2019-01-01 14:15:16	COMPLETED	150	50.0	50.0	325448db-8047-4649-a4f3-dbcaf8354336	8f0e63ec-d56e-40eb-8f70-21e0f9a92c3e	442f58f1-9d63-45cf-acd1-938efd433984	R_13844	20190101
+[2022-06-08 10:32:17,586] {subprocess.py:92} INFO - Time taken: 0.323 seconds, Fetched: 5 row(s)
+[2022-06-08 10:32:17,955] {subprocess.py:92} INFO - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+[2022-06-08 10:32:17,963] {subprocess.py:92} INFO - Query ID = root_20220608103217_03619f12-4f3f-471f-bec5-926b2e9a8f45
+[2022-06-08 10:32:17,970] {subprocess.py:92} INFO - Total jobs = 1
+[2022-06-08 10:32:17,975] {subprocess.py:92} INFO - Launching Job 1 out of 1
+[2022-06-08 10:32:17,980] {subprocess.py:92} INFO - Number of reduce tasks determined at compile time: 1
+[2022-06-08 10:32:17,984] {subprocess.py:92} INFO - In order to change the average load for a reducer (in bytes):
+[2022-06-08 10:32:17,988] {subprocess.py:92} INFO -   set hive.exec.reducers.bytes.per.reducer=<number>
+[2022-06-08 10:32:17,993] {subprocess.py:92} INFO - In order to limit the maximum number of reducers:
+[2022-06-08 10:32:17,999] {subprocess.py:92} INFO -   set hive.exec.reducers.max=<number>
+[2022-06-08 10:32:18,001] {subprocess.py:92} INFO - In order to set a constant number of reducers:
+[2022-06-08 10:32:18,007] {subprocess.py:92} INFO -   set mapreduce.job.reduces=<number>
+[2022-06-08 10:32:18,948] {subprocess.py:92} INFO - Job running in-process (local Hadoop)
+[2022-06-08 10:32:19,927] {subprocess.py:92} INFO - 2022-06-08 10:32:19,926 Stage-1 map = 0%,  reduce = 0%
+[2022-06-08 10:32:25,943] {subprocess.py:92} INFO - 2022-06-08 10:32:25,940 Stage-1 map = 100%,  reduce = 100%
+[2022-06-08 10:32:25,945] {subprocess.py:92} INFO - Ended Job = job_local1384076079_0002
+[2022-06-08 10:32:25,951] {subprocess.py:92} INFO - MapReduce Jobs Launched:
+[2022-06-08 10:32:25,952] {subprocess.py:92} INFO - Stage-Stage-1:  HDFS Read: 108834490 HDFS Write: 0 SUCCESS
+[2022-06-08 10:32:25,953] {subprocess.py:92} INFO - Total MapReduce CPU Time Spent: 0 msec
+[2022-06-08 10:32:25,954] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:25,963] {subprocess.py:92} INFO - 118713
+[2022-06-08 10:32:25,965] {subprocess.py:92} INFO - Time taken: 8.361 seconds, Fetched: 1 row(s)
+[2022-06-08 10:32:26,165] {subprocess.py:92} INFO - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+[2022-06-08 10:32:26,166] {subprocess.py:92} INFO - Query ID = root_20220608103225_a198156c-f34b-4121-b016-9afc911cac91
+[2022-06-08 10:32:26,167] {subprocess.py:92} INFO - Total jobs = 1
+[2022-06-08 10:32:26,168] {subprocess.py:92} INFO - Launching Job 1 out of 1
+[2022-06-08 10:32:26,169] {subprocess.py:92} INFO - Number of reduce tasks determined at compile time: 1
+[2022-06-08 10:32:26,170] {subprocess.py:92} INFO - In order to change the average load for a reducer (in bytes):
+[2022-06-08 10:32:26,171] {subprocess.py:92} INFO -   set hive.exec.reducers.bytes.per.reducer=<number>
+[2022-06-08 10:32:26,172] {subprocess.py:92} INFO - In order to limit the maximum number of reducers:
+[2022-06-08 10:32:26,173] {subprocess.py:92} INFO -   set hive.exec.reducers.max=<number>
+[2022-06-08 10:32:26,174] {subprocess.py:92} INFO - In order to set a constant number of reducers:
+[2022-06-08 10:32:26,176] {subprocess.py:92} INFO -   set mapreduce.job.reduces=<number>
+[2022-06-08 10:32:26,809] {subprocess.py:92} INFO - Job running in-process (local Hadoop)
+[2022-06-08 10:32:27,811] {subprocess.py:92} INFO - 2022-06-08 10:32:27,810 Stage-1 map = 0%,  reduce = 0%
+[2022-06-08 10:32:32,828] {subprocess.py:92} INFO - 2022-06-08 10:32:32,827 Stage-1 map = 100%,  reduce = 100%
+[2022-06-08 10:32:32,832] {subprocess.py:92} INFO - Ended Job = job_local1537227234_0003
+[2022-06-08 10:32:32,834] {subprocess.py:92} INFO - MapReduce Jobs Launched:
+[2022-06-08 10:32:32,835] {subprocess.py:92} INFO - Stage-Stage-1:  HDFS Read: 113491268 HDFS Write: 0 SUCCESS
+[2022-06-08 10:32:32,836] {subprocess.py:92} INFO - Total MapReduce CPU Time Spent: 0 msec
+[2022-06-08 10:32:32,837] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:32,844] {subprocess.py:92} INFO - 0
+[2022-06-08 10:32:32,845] {subprocess.py:92} INFO - Time taken: 6.869 seconds, Fetched: 1 row(s)
+[2022-06-08 10:32:32,916] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:32,924] {subprocess.py:92} INFO - CREATE EXTERNAL TABLE `order_detail_new`(
+[2022-06-08 10:32:32,925] {subprocess.py:92} INFO -   `order_created_timestamp` timestamp,
+[2022-06-08 10:32:32,926] {subprocess.py:92} INFO -   `status` string,
+[2022-06-08 10:32:32,926] {subprocess.py:92} INFO -   `price` int,
+[2022-06-08 10:32:32,927] {subprocess.py:92} INFO -   `discount` float,
+[2022-06-08 10:32:32,927] {subprocess.py:92} INFO -   `discount_no_null` float,
+[2022-06-08 10:32:32,928] {subprocess.py:92} INFO -   `id` string,
+[2022-06-08 10:32:32,929] {subprocess.py:92} INFO -   `driver_id` string,
+[2022-06-08 10:32:32,930] {subprocess.py:92} INFO -   `user_id` string,
+[2022-06-08 10:32:32,931] {subprocess.py:92} INFO -   `restaurant_id` string)
+[2022-06-08 10:32:32,931] {subprocess.py:92} INFO - PARTITIONED BY (
+[2022-06-08 10:32:32,932] {subprocess.py:92} INFO -   `dt` string)
+[2022-06-08 10:32:32,932] {subprocess.py:92} INFO - ROW FORMAT SERDE
+[2022-06-08 10:32:32,933] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
+[2022-06-08 10:32:32,934] {subprocess.py:92} INFO - STORED AS INPUTFORMAT
+[2022-06-08 10:32:32,935] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+[2022-06-08 10:32:32,935] {subprocess.py:92} INFO - OUTPUTFORMAT
+[2022-06-08 10:32:32,936] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
+[2022-06-08 10:32:32,936] {subprocess.py:92} INFO - LOCATION
+[2022-06-08 10:32:32,937] {subprocess.py:92} INFO -   'hdfs://namenode:8020/user/spark/order_detail_new'
+[2022-06-08 10:32:32,937] {subprocess.py:92} INFO - TBLPROPERTIES (
+[2022-06-08 10:32:32,938] {subprocess.py:92} INFO -   'transient_lastDdlTime'='1654684313')
+[2022-06-08 10:32:32,939] {subprocess.py:92} INFO - Time taken: 0.069 seconds, Fetched: 22 row(s)
+[2022-06-08 10:32:33,420] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-08 10:32:33,465] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_hive_order_detail_new, execution_date=20220608T072645, start_date=20220608T103138, end_date=20220608T103233
+[2022-06-08 10:32:33,502] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 10:32:33,554] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

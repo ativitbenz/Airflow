@@ -1,0 +1,18 @@
+[2022-07-19 06:06:39,224] {processor.py:153} INFO - Started process (PID=178) to work on /opt/airflow/dags/dag.py
+[2022-07-19 06:06:39,226] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-07-19 06:06:39,228] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,228] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-07-19 06:06:39,325] {processor.py:651} INFO - DAG(s) dict_keys(['hands_on_test']) retrieved from /opt/airflow/dags/dag.py
+[2022-07-19 06:06:39,453] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,453] {manager.py:508} INFO - Created Permission View: can delete on DAG:hands_on_test
+[2022-07-19 06:06:39,464] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,464] {manager.py:508} INFO - Created Permission View: can edit on DAG:hands_on_test
+[2022-07-19 06:06:39,471] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,471] {manager.py:508} INFO - Created Permission View: can read on DAG:hands_on_test
+[2022-07-19 06:06:39,472] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,472] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-07-19 06:06:39,482] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,482] {dag.py:2390} INFO - Creating ORM DAG for hands_on_test
+[2022-07-19 06:06:39,499] {logging_mixin.py:115} INFO - [2022-07-19 06:06:39,499] {dag.py:2919} INFO - Setting next_dagrun for hands_on_test to 2022-07-18T00:00:00+00:00, run_after=2022-07-19T00:00:00+00:00
+[2022-07-19 06:06:39,513] {processor.py:161} INFO - Processing /opt/airflow/dags/dag.py took 0.293 seconds
+[2022-07-19 06:07:10,438] {processor.py:153} INFO - Started process (PID=208) to work on /opt/airflow/dags/dag.py
+[2022-07-19 06:07:10,440] {processor.py:641} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-07-19 06:07:10,441] {logging_mixin.py:115} INFO - [2022-07-19 06:07:10,441] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-07-19 06:07:10,509] {processor.py:651} INFO - DAG(s) dict_keys(['hands_on_test']) retrieved from /opt/airflow/dags/dag.py
+[2022-07-19 06:07:10,555] {logging_mixin.py:115} INFO - [2022-07-19 06:07:10,554] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-07-19 06:07:10,591] {logging_mixin.py:115} INFO - [2022-07-19 06:07:10,591] {dag.py:2919} INFO - Setting next_dagrun for hands_on_test to 2022-07-18T00:00:00+00:00, run_after=2022-07-19T00:00:00+00:00
+[2022-07-19 06:07:10,612] {processor.py:161} INFO - Processing /opt/airflow/dags/dag.py took 0.177 seconds

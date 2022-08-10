@@ -1,0 +1,19 @@
+[2022-06-14 09:41:58,285] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-10T00:00:00+00:00 [queued]>
+[2022-06-14 09:41:58,363] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-10T00:00:00+00:00 [queued]>
+[2022-06-14 09:41:58,371] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 09:41:58,373] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-14 09:41:58,374] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 09:41:58,440] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_order_detail> on 2022-06-10 00:00:00+00:00
+[2022-06-14 09:41:58,465] {standard_task_runner.py:52} INFO - Started process 212 to run task
+[2022-06-14 09:41:58,511] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_order_detail', 'scheduled__2022-06-10T00:00:00+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpecbugfve', '--error-file', '/tmp/tmpzrtlbg4z']
+[2022-06-14 09:41:58,519] {standard_task_runner.py:80} INFO - Job 80: Subtask create_order_detail
+[2022-06-14 09:41:59,053] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_order_detail scheduled__2022-06-10T00:00:00+00:00 [running]> on host a0fd966c00bf
+[2022-06-14 09:41:59,077] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2022-06-14 09:41:59,096] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 212. PIDs of all processes in the group: [212]
+[2022-06-14 09:41:59,099] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 212
+[2022-06-14 09:41:59,138] {process_utils.py:75} INFO - Process psutil.Process(pid=212, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='09:41:57') (212) terminated with exit code Negsignal.SIGTERM
+[2022-06-14 09:41:59,140] {local_task_job.py:156} INFO - Task exited with return code 143
+[2022-06-14 09:41:59,218] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=create_order_detail, execution_date=20220610T000000, start_date=20220614T094158, end_date=20220614T094159
+[2022-06-14 09:42:00,065] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

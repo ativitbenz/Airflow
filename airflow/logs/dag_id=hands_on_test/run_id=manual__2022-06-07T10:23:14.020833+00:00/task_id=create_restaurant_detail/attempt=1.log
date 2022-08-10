@@ -1,0 +1,32 @@
+[2022-06-07 10:23:16,748] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_restaurant_detail manual__2022-06-07T10:23:14.020833+00:00 [queued]>
+[2022-06-07 10:23:16,764] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_restaurant_detail manual__2022-06-07T10:23:14.020833+00:00 [queued]>
+[2022-06-07 10:23:16,765] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:23:16,766] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 10:23:16,767] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 10:23:16,787] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): create_restaurant_detail> on 2022-06-07 10:23:14.020833+00:00
+[2022-06-07 10:23:16,794] {standard_task_runner.py:52} INFO - Started process 21740 to run task
+[2022-06-07 10:23:16,800] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_restaurant_detail', 'manual__2022-06-07T10:23:14.020833+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxoyyh5bw', '--error-file', '/tmp/tmpd0_brhh9']
+[2022-06-07 10:23:16,803] {standard_task_runner.py:80} INFO - Job 99: Subtask create_restaurant_detail
+[2022-06-07 10:23:16,893] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_restaurant_detail manual__2022-06-07T10:23:14.020833+00:00 [running]> on host a4a1e1d603db
+[2022-06-07 10:23:17,012] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_restaurant_detail
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T10:23:14.020833+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-07T10:23:14.020833+00:00
+[2022-06-07 10:23:17,028] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 10:23:17,045] {dbapi.py:208} INFO - Running statement: 
+CREATE TABLE IF NOT EXISTS restaurant_detail (
+    id VARCHAR PRIMARY KEY NOT NULL,
+    restaurant_name VARCHAR,
+    category VARCHAR,
+    estimated_cooking_time FLOAT,
+    latitude FLOAT,
+    longitude FLOAT
+);, parameters: None
+[2022-06-07 10:23:17,089] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_restaurant_detail, execution_date=20220607T102314, start_date=20220607T102316, end_date=20220607T102317
+[2022-06-07 10:23:17,174] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 10:23:17,289] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

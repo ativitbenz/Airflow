@@ -1,0 +1,34 @@
+[2022-06-07 02:24:59,273] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.install_sqoop manual__2022-06-07T02:21:55.472940+00:00 [queued]>
+[2022-06-07 02:24:59,291] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.install_sqoop manual__2022-06-07T02:21:55.472940+00:00 [queued]>
+[2022-06-07 02:24:59,293] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:24:59,294] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-07 02:24:59,296] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:24:59,331] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): install_sqoop> on 2022-06-07 02:21:55.472940+00:00
+[2022-06-07 02:24:59,342] {standard_task_runner.py:52} INFO - Started process 524 to run task
+[2022-06-07 02:24:59,349] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'install_sqoop', 'manual__2022-06-07T02:21:55.472940+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp9nwlggxt', '--error-file', '/tmp/tmp1x044rx9']
+[2022-06-07 02:24:59,353] {standard_task_runner.py:80} INFO - Job 89: Subtask install_sqoop
+[2022-06-07 02:24:59,598] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.install_sqoop manual__2022-06-07T02:21:55.472940+00:00 [running]> on host 078df8b61ea1
+[2022-06-07 02:24:59,720] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=install_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T02:21:55.472940+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-07T02:21:55.472940+00:00
+[2022-06-07 02:24:59,723] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-07 02:24:59,725] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/install_sqoop.sh ']
+[2022-06-07 02:24:59,738] {subprocess.py:85} INFO - Output:
+[2022-06-07 02:24:59,785] {subprocess.py:92} INFO - Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/hive-server/json": dial unix /var/run/docker.sock: connect: permission denied
+[2022-06-07 02:24:59,790] {subprocess.py:96} INFO - Command exited with return code 1
+[2022-06-07 02:24:59,812] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-07 02:24:59,818] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=hands_on_test, task_id=install_sqoop, execution_date=20220607T022155, start_date=20220607T022459, end_date=20220607T022459
+[2022-06-07 02:24:59,836] {standard_task_runner.py:97} ERROR - Failed to execute job 89 for task install_sqoop (Bash command failed. The command returned a non-zero exit code 1.; 524)
+[2022-06-07 02:24:59,864] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 02:24:59,936] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

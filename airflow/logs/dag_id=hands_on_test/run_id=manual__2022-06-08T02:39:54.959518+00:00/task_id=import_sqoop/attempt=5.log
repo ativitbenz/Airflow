@@ -1,0 +1,403 @@
+[2022-06-08 04:47:17,743] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 04:47:17,757] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 04:47:17,758] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 04:47:17,759] {taskinstance.py:1357} INFO - Starting attempt 5 of 6
+[2022-06-08 04:47:17,760] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 04:47:17,780] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): import_sqoop> on 2022-06-08 02:39:54.959518+00:00
+[2022-06-08 04:47:17,786] {standard_task_runner.py:52} INFO - Started process 8800 to run task
+[2022-06-08 04:47:17,791] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'import_sqoop', 'manual__2022-06-08T02:39:54.959518+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpps6h9mgx', '--error-file', '/tmp/tmpep2ewtpg']
+[2022-06-08 04:47:17,794] {standard_task_runner.py:80} INFO - Job 104: Subtask import_sqoop
+[2022-06-08 04:47:17,874] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.import_sqoop manual__2022-06-08T02:39:54.959518+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 04:47:17,978] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=import_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T02:39:54.959518+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T02:39:54.959518+00:00
+[2022-06-08 04:47:17,981] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 04:47:17,983] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/import_sqoop.sh ']
+[2022-06-08 04:47:17,994] {subprocess.py:85} INFO - Output:
+[2022-06-08 04:47:19,558] {subprocess.py:92} INFO - 22/06/08 04:47:19 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+[2022-06-08 04:47:19,569] {subprocess.py:92} INFO - Deleted /user/sqoop
+[2022-06-08 04:47:21,845] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hbase does not exist! HBase imports will fail.
+[2022-06-08 04:47:21,847] {subprocess.py:92} INFO - Please set $HBASE_HOME to the root of your HBase installation.
+[2022-06-08 04:47:21,848] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hcatalog does not exist! HCatalog jobs will fail.
+[2022-06-08 04:47:21,848] {subprocess.py:92} INFO - Please set $HCAT_HOME to the root of your HCatalog installation.
+[2022-06-08 04:47:21,849] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../accumulo does not exist! Accumulo imports will fail.
+[2022-06-08 04:47:21,850] {subprocess.py:92} INFO - Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+[2022-06-08 04:47:21,850] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../zookeeper does not exist! Accumulo imports will fail.
+[2022-06-08 04:47:21,851] {subprocess.py:92} INFO - Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+[2022-06-08 04:47:22,435] {subprocess.py:92} INFO - 22/06/08 04:47:22 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+[2022-06-08 04:47:22,521] {subprocess.py:92} INFO - 22/06/08 04:47:22 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+[2022-06-08 04:47:22,639] {subprocess.py:92} INFO - 22/06/08 04:47:22 INFO manager.SqlManager: Using default fetchSize of 1000
+[2022-06-08 04:47:22,640] {subprocess.py:92} INFO - 22/06/08 04:47:22 INFO tool.CodeGenTool: Beginning code generation
+[2022-06-08 04:47:22,777] {subprocess.py:92} INFO - 22/06/08 04:47:22 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM "order_detail" AS t LIMIT 1
+[2022-06-08 04:47:22,856] {subprocess.py:92} INFO - 22/06/08 04:47:22 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/hadoop-2.7.4
+[2022-06-08 04:47:24,271] {subprocess.py:92} INFO - Note: /tmp/sqoop-root/compile/cc3b7aef5a1ae7c71601757928bd2676/order_detail.java uses or overrides a deprecated API.
+[2022-06-08 04:47:24,272] {subprocess.py:92} INFO - Note: Recompile with -Xlint:deprecation for details.
+[2022-06-08 04:47:24,275] {subprocess.py:92} INFO - 22/06/08 04:47:24 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-root/compile/cc3b7aef5a1ae7c71601757928bd2676/order_detail.jar
+[2022-06-08 04:47:24,290] {subprocess.py:92} INFO - 22/06/08 04:47:24 WARN manager.PostgresqlManager: It looks like you are importing from postgresql.
+[2022-06-08 04:47:24,291] {subprocess.py:92} INFO - 22/06/08 04:47:24 WARN manager.PostgresqlManager: This transfer can be faster! Use the --direct
+[2022-06-08 04:47:24,291] {subprocess.py:92} INFO - 22/06/08 04:47:24 WARN manager.PostgresqlManager: option to exercise a postgresql-specific fast path.
+[2022-06-08 04:47:24,297] {subprocess.py:92} INFO - 22/06/08 04:47:24 INFO mapreduce.ImportJobBase: Beginning import of order_detail
+[2022-06-08 04:47:24,464] {subprocess.py:92} INFO - 22/06/08 04:47:24 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+[2022-06-08 04:47:25,117] {subprocess.py:92} INFO - 22/06/08 04:47:25 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+[2022-06-08 04:47:25,137] {subprocess.py:92} INFO - 22/06/08 04:47:25 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+[2022-06-08 04:47:25,138] {subprocess.py:92} INFO - 22/06/08 04:47:25 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+[2022-06-08 04:47:25,497] {subprocess.py:92} INFO - 22/06/08 04:47:25 INFO db.DBInputFormat: Using read commited transaction isolation
+[2022-06-08 04:47:25,514] {subprocess.py:92} INFO - 22/06/08 04:47:25 INFO mapreduce.JobSubmitter: number of splits:1
+[2022-06-08 04:47:25,611] {subprocess.py:92} INFO - 22/06/08 04:47:25 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local1175479114_0001
+[2022-06-08 04:47:26,094] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645736/ant-eclipse-1.0-jvm1.2.jar <- /opt/ant-eclipse-1.0-jvm1.2.jar
+[2022-06-08 04:47:26,180] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/ant-eclipse-1.0-jvm1.2.jar as file:/tmp/hadoop-root/mapred/local/1654663645736/ant-eclipse-1.0-jvm1.2.jar
+[2022-06-08 04:47:26,433] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645737/paranamer-2.7.jar <- /opt/paranamer-2.7.jar
+[2022-06-08 04:47:26,459] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/paranamer-2.7.jar as file:/tmp/hadoop-root/mapred/local/1654663645737/paranamer-2.7.jar
+[2022-06-08 04:47:26,460] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645738/commons-codec-1.4.jar <- /opt/commons-codec-1.4.jar
+[2022-06-08 04:47:26,489] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-codec-1.4.jar as file:/tmp/hadoop-root/mapred/local/1654663645738/commons-codec-1.4.jar
+[2022-06-08 04:47:26,491] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645739/commons-jexl-2.1.1.jar <- /opt/commons-jexl-2.1.1.jar
+[2022-06-08 04:47:26,518] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-jexl-2.1.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645739/commons-jexl-2.1.1.jar
+[2022-06-08 04:47:26,520] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645740/jackson-core-2.3.1.jar <- /opt/jackson-core-2.3.1.jar
+[2022-06-08 04:47:26,527] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-core-2.3.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645740/jackson-core-2.3.1.jar
+[2022-06-08 04:47:26,528] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645741/parquet-jackson-1.6.0.jar <- /opt/parquet-jackson-1.6.0.jar
+[2022-06-08 04:47:26,533] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-jackson-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645741/parquet-jackson-1.6.0.jar
+[2022-06-08 04:47:26,534] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645742/parquet-hadoop-1.6.0.jar <- /opt/parquet-hadoop-1.6.0.jar
+[2022-06-08 04:47:26,537] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-hadoop-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645742/parquet-hadoop-1.6.0.jar
+[2022-06-08 04:47:26,538] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645743/jackson-annotations-2.3.1.jar <- /opt/jackson-annotations-2.3.1.jar
+[2022-06-08 04:47:26,541] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-annotations-2.3.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645743/jackson-annotations-2.3.1.jar
+[2022-06-08 04:47:26,542] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645744/commons-logging-1.1.1.jar <- /opt/commons-logging-1.1.1.jar
+[2022-06-08 04:47:26,544] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-logging-1.1.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645744/commons-logging-1.1.1.jar
+[2022-06-08 04:47:26,545] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645745/opencsv-2.3.jar <- /opt/opencsv-2.3.jar
+[2022-06-08 04:47:26,547] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/opencsv-2.3.jar as file:/tmp/hadoop-root/mapred/local/1654663645745/opencsv-2.3.jar
+[2022-06-08 04:47:26,548] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645746/kite-data-hive-1.1.0.jar <- /opt/kite-data-hive-1.1.0.jar
+[2022-06-08 04:47:26,552] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-data-hive-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645746/kite-data-hive-1.1.0.jar
+[2022-06-08 04:47:26,553] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645747/hsqldb-1.8.0.10.jar <- /opt/hsqldb-1.8.0.10.jar
+[2022-06-08 04:47:26,555] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/hsqldb-1.8.0.10.jar as file:/tmp/hadoop-root/mapred/local/1654663645747/hsqldb-1.8.0.10.jar
+[2022-06-08 04:47:26,556] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645748/commons-lang3-3.4.jar <- /opt/commons-lang3-3.4.jar
+[2022-06-08 04:47:26,559] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-lang3-3.4.jar as file:/tmp/hadoop-root/mapred/local/1654663645748/commons-lang3-3.4.jar
+[2022-06-08 04:47:26,560] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645749/xz-1.5.jar <- /opt/xz-1.5.jar
+[2022-06-08 04:47:26,563] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/xz-1.5.jar as file:/tmp/hadoop-root/mapred/local/1654663645749/xz-1.5.jar
+[2022-06-08 04:47:26,564] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645750/parquet-column-1.6.0.jar <- /opt/parquet-column-1.6.0.jar
+[2022-06-08 04:47:26,567] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-column-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645750/parquet-column-1.6.0.jar
+[2022-06-08 04:47:26,568] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645751/kite-data-mapreduce-1.1.0.jar <- /opt/kite-data-mapreduce-1.1.0.jar
+[2022-06-08 04:47:26,571] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-data-mapreduce-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645751/kite-data-mapreduce-1.1.0.jar
+[2022-06-08 04:47:26,571] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645752/jackson-core-asl-1.9.13.jar <- /opt/jackson-core-asl-1.9.13.jar
+[2022-06-08 04:47:26,574] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-core-asl-1.9.13.jar as file:/tmp/hadoop-root/mapred/local/1654663645752/jackson-core-asl-1.9.13.jar
+[2022-06-08 04:47:26,575] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645753/parquet-generator-1.6.0.jar <- /opt/parquet-generator-1.6.0.jar
+[2022-06-08 04:47:26,578] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-generator-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645753/parquet-generator-1.6.0.jar
+[2022-06-08 04:47:26,579] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645754/parquet-common-1.6.0.jar <- /opt/parquet-common-1.6.0.jar
+[2022-06-08 04:47:26,581] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-common-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645754/parquet-common-1.6.0.jar
+[2022-06-08 04:47:26,583] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645755/jackson-databind-2.3.1.jar <- /opt/jackson-databind-2.3.1.jar
+[2022-06-08 04:47:26,586] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-databind-2.3.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645755/jackson-databind-2.3.1.jar
+[2022-06-08 04:47:26,586] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645756/avro-1.8.1.jar <- /opt/avro-1.8.1.jar
+[2022-06-08 04:47:26,589] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/avro-1.8.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645756/avro-1.8.1.jar
+[2022-06-08 04:47:26,589] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645757/snappy-java-1.1.1.6.jar <- /opt/snappy-java-1.1.1.6.jar
+[2022-06-08 04:47:26,592] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/snappy-java-1.1.1.6.jar as file:/tmp/hadoop-root/mapred/local/1654663645757/snappy-java-1.1.1.6.jar
+[2022-06-08 04:47:26,593] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645758/kite-hadoop-compatibility-1.1.0.jar <- /opt/kite-hadoop-compatibility-1.1.0.jar
+[2022-06-08 04:47:26,596] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-hadoop-compatibility-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645758/kite-hadoop-compatibility-1.1.0.jar
+[2022-06-08 04:47:26,596] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645759/parquet-avro-1.6.0.jar <- /opt/parquet-avro-1.6.0.jar
+[2022-06-08 04:47:26,599] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-avro-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645759/parquet-avro-1.6.0.jar
+[2022-06-08 04:47:26,600] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645760/slf4j-api-1.6.1.jar <- /opt/slf4j-api-1.6.1.jar
+[2022-06-08 04:47:26,603] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/slf4j-api-1.6.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645760/slf4j-api-1.6.1.jar
+[2022-06-08 04:47:26,604] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645761/avro-mapred-1.8.1-hadoop2.jar <- /opt/avro-mapred-1.8.1-hadoop2.jar
+[2022-06-08 04:47:26,607] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/avro-mapred-1.8.1-hadoop2.jar as file:/tmp/hadoop-root/mapred/local/1654663645761/avro-mapred-1.8.1-hadoop2.jar
+[2022-06-08 04:47:26,608] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645762/ant-contrib-1.0b3.jar <- /opt/ant-contrib-1.0b3.jar
+[2022-06-08 04:47:26,611] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/ant-contrib-1.0b3.jar as file:/tmp/hadoop-root/mapred/local/1654663645762/ant-contrib-1.0b3.jar
+[2022-06-08 04:47:26,612] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645763/sqoop-1.4.7.jar <- /opt/sqoop-1.4.7.jar
+[2022-06-08 04:47:26,614] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/sqoop-1.4.7.jar as file:/tmp/hadoop-root/mapred/local/1654663645763/sqoop-1.4.7.jar
+[2022-06-08 04:47:26,615] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645764/commons-io-1.4.jar <- /opt/commons-io-1.4.jar
+[2022-06-08 04:47:26,617] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-io-1.4.jar as file:/tmp/hadoop-root/mapred/local/1654663645764/commons-io-1.4.jar
+[2022-06-08 04:47:26,618] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645765/parquet-format-2.2.0-rc1.jar <- /opt/parquet-format-2.2.0-rc1.jar
+[2022-06-08 04:47:26,620] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-format-2.2.0-rc1.jar as file:/tmp/hadoop-root/mapred/local/1654663645765/parquet-format-2.2.0-rc1.jar
+[2022-06-08 04:47:26,622] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645766/kite-data-core-1.1.0.jar <- /opt/kite-data-core-1.1.0.jar
+[2022-06-08 04:47:26,624] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-data-core-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645766/kite-data-core-1.1.0.jar
+[2022-06-08 04:47:26,624] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645767/postgresql-42.2.19.jre6.jar <- /opt/postgresql-42.2.19.jre6.jar
+[2022-06-08 04:47:26,627] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/postgresql-42.2.19.jre6.jar as file:/tmp/hadoop-root/mapred/local/1654663645767/postgresql-42.2.19.jre6.jar
+[2022-06-08 04:47:26,628] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645768/commons-compress-1.8.1.jar <- /opt/commons-compress-1.8.1.jar
+[2022-06-08 04:47:26,631] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-compress-1.8.1.jar as file:/tmp/hadoop-root/mapred/local/1654663645768/commons-compress-1.8.1.jar
+[2022-06-08 04:47:26,632] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645769/jackson-mapper-asl-1.9.13.jar <- /opt/jackson-mapper-asl-1.9.13.jar
+[2022-06-08 04:47:26,634] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-mapper-asl-1.9.13.jar as file:/tmp/hadoop-root/mapred/local/1654663645769/jackson-mapper-asl-1.9.13.jar
+[2022-06-08 04:47:26,635] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663645770/parquet-encoding-1.6.0.jar <- /opt/parquet-encoding-1.6.0.jar
+[2022-06-08 04:47:26,638] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-encoding-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663645770/parquet-encoding-1.6.0.jar
+[2022-06-08 04:47:26,692] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645736/ant-eclipse-1.0-jvm1.2.jar
+[2022-06-08 04:47:26,694] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645737/paranamer-2.7.jar
+[2022-06-08 04:47:26,695] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645738/commons-codec-1.4.jar
+[2022-06-08 04:47:26,696] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645739/commons-jexl-2.1.1.jar
+[2022-06-08 04:47:26,697] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645740/jackson-core-2.3.1.jar
+[2022-06-08 04:47:26,698] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645741/parquet-jackson-1.6.0.jar
+[2022-06-08 04:47:26,699] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645742/parquet-hadoop-1.6.0.jar
+[2022-06-08 04:47:26,700] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645743/jackson-annotations-2.3.1.jar
+[2022-06-08 04:47:26,701] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645744/commons-logging-1.1.1.jar
+[2022-06-08 04:47:26,702] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645745/opencsv-2.3.jar
+[2022-06-08 04:47:26,703] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645746/kite-data-hive-1.1.0.jar
+[2022-06-08 04:47:26,704] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645747/hsqldb-1.8.0.10.jar
+[2022-06-08 04:47:26,704] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645748/commons-lang3-3.4.jar
+[2022-06-08 04:47:26,705] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645749/xz-1.5.jar
+[2022-06-08 04:47:26,706] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645750/parquet-column-1.6.0.jar
+[2022-06-08 04:47:26,707] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645751/kite-data-mapreduce-1.1.0.jar
+[2022-06-08 04:47:26,707] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645752/jackson-core-asl-1.9.13.jar
+[2022-06-08 04:47:26,708] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645753/parquet-generator-1.6.0.jar
+[2022-06-08 04:47:26,709] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645754/parquet-common-1.6.0.jar
+[2022-06-08 04:47:26,710] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645755/jackson-databind-2.3.1.jar
+[2022-06-08 04:47:26,710] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645756/avro-1.8.1.jar
+[2022-06-08 04:47:26,711] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645757/snappy-java-1.1.1.6.jar
+[2022-06-08 04:47:26,712] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645758/kite-hadoop-compatibility-1.1.0.jar
+[2022-06-08 04:47:26,712] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645759/parquet-avro-1.6.0.jar
+[2022-06-08 04:47:26,713] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645760/slf4j-api-1.6.1.jar
+[2022-06-08 04:47:26,714] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645761/avro-mapred-1.8.1-hadoop2.jar
+[2022-06-08 04:47:26,715] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645762/ant-contrib-1.0b3.jar
+[2022-06-08 04:47:26,716] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645763/sqoop-1.4.7.jar
+[2022-06-08 04:47:26,717] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645764/commons-io-1.4.jar
+[2022-06-08 04:47:26,718] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645765/parquet-format-2.2.0-rc1.jar
+[2022-06-08 04:47:26,718] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645766/kite-data-core-1.1.0.jar
+[2022-06-08 04:47:26,720] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645767/postgresql-42.2.19.jre6.jar
+[2022-06-08 04:47:26,720] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645768/commons-compress-1.8.1.jar
+[2022-06-08 04:47:26,721] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645769/jackson-mapper-asl-1.9.13.jar
+[2022-06-08 04:47:26,722] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663645770/parquet-encoding-1.6.0.jar
+[2022-06-08 04:47:26,723] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+[2022-06-08 04:47:26,724] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapreduce.Job: Running job: job_local1175479114_0001
+[2022-06-08 04:47:26,724] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+[2022-06-08 04:47:26,731] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-08 04:47:26,734] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+[2022-06-08 04:47:26,882] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalJobRunner: Waiting for map tasks
+[2022-06-08 04:47:26,884] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.LocalJobRunner: Starting task: attempt_local1175479114_0001_m_000000_0
+[2022-06-08 04:47:26,914] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-08 04:47:26,926] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+[2022-06-08 04:47:26,932] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO db.DBInputFormat: Using read commited transaction isolation
+[2022-06-08 04:47:26,935] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO mapred.MapTask: Processing split: 1=1 AND 1=1
+[2022-06-08 04:47:26,990] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO db.DBRecordReader: Working on split: 1=1 AND 1=1
+[2022-06-08 04:47:26,992] {subprocess.py:92} INFO - 22/06/08 04:47:26 INFO db.DBRecordReader: Executing query: SELECT "order_created_timestamp", "status", "price", "discount", "id", "driver_id", "user_id", "restaurant_id" FROM "order_detail" WHERE ( 1=1 ) AND ( 1=1 )
+[2022-06-08 04:47:27,711] {subprocess.py:92} INFO - 22/06/08 04:47:27 INFO mapreduce.Job: Job job_local1175479114_0001 running in uber mode : false
+[2022-06-08 04:47:27,713] {subprocess.py:92} INFO - 22/06/08 04:47:27 INFO mapreduce.Job:  map 0% reduce 0%
+[2022-06-08 04:47:29,420] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapreduce.AutoProgressMapper: Auto-progress thread is finished. keepGoing=false
+[2022-06-08 04:47:29,424] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.LocalJobRunner:
+[2022-06-08 04:47:29,439] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.Task: Task:attempt_local1175479114_0001_m_000000_0 is done. And is in the process of committing
+[2022-06-08 04:47:29,448] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.LocalJobRunner:
+[2022-06-08 04:47:29,450] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.Task: Task attempt_local1175479114_0001_m_000000_0 is allowed to commit now
+[2022-06-08 04:47:29,460] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO output.FileOutputCommitter: Saved output of task 'attempt_local1175479114_0001_m_000000_0' to hdfs://namenode:8020/user/root/order_detail/_temporary/0/task_local1175479114_0001_m_000000
+[2022-06-08 04:47:29,461] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.LocalJobRunner: map
+[2022-06-08 04:47:29,462] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.Task: Task 'attempt_local1175479114_0001_m_000000_0' done.
+[2022-06-08 04:47:29,463] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.LocalJobRunner: Finishing task: attempt_local1175479114_0001_m_000000_0
+[2022-06-08 04:47:29,464] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapred.LocalJobRunner: map task executor complete.
+[2022-06-08 04:47:29,716] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapreduce.Job:  map 100% reduce 0%
+[2022-06-08 04:47:29,718] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapreduce.Job: Job job_local1175479114_0001 completed successfully
+[2022-06-08 04:47:29,738] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapreduce.Job: Counters: 20
+[2022-06-08 04:47:29,739] {subprocess.py:92} INFO - 	File System Counters
+[2022-06-08 04:47:29,740] {subprocess.py:92} INFO - 		FILE: Number of bytes read=19091037
+[2022-06-08 04:47:29,741] {subprocess.py:92} INFO - 		FILE: Number of bytes written=19551970
+[2022-06-08 04:47:29,741] {subprocess.py:92} INFO - 		FILE: Number of read operations=0
+[2022-06-08 04:47:29,743] {subprocess.py:92} INFO - 		FILE: Number of large read operations=0
+[2022-06-08 04:47:29,744] {subprocess.py:92} INFO - 		FILE: Number of write operations=0
+[2022-06-08 04:47:29,744] {subprocess.py:92} INFO - 		HDFS: Number of bytes read=0
+[2022-06-08 04:47:29,745] {subprocess.py:92} INFO - 		HDFS: Number of bytes written=63211788
+[2022-06-08 04:47:29,746] {subprocess.py:92} INFO - 		HDFS: Number of read operations=4
+[2022-06-08 04:47:29,746] {subprocess.py:92} INFO - 		HDFS: Number of large read operations=0
+[2022-06-08 04:47:29,747] {subprocess.py:92} INFO - 		HDFS: Number of write operations=3
+[2022-06-08 04:47:29,748] {subprocess.py:92} INFO - 	Map-Reduce Framework
+[2022-06-08 04:47:29,749] {subprocess.py:92} INFO - 		Map input records=395361
+[2022-06-08 04:47:29,749] {subprocess.py:92} INFO - 		Map output records=395361
+[2022-06-08 04:47:29,750] {subprocess.py:92} INFO - 		Input split bytes=87
+[2022-06-08 04:47:29,751] {subprocess.py:92} INFO - 		Spilled Records=0
+[2022-06-08 04:47:29,751] {subprocess.py:92} INFO - 		Failed Shuffles=0
+[2022-06-08 04:47:29,752] {subprocess.py:92} INFO - 		Merged Map outputs=0
+[2022-06-08 04:47:29,753] {subprocess.py:92} INFO - 		GC time elapsed (ms)=70
+[2022-06-08 04:47:29,753] {subprocess.py:92} INFO - 		Total committed heap usage (bytes)=252182528
+[2022-06-08 04:47:29,754] {subprocess.py:92} INFO - 	File Input Format Counters
+[2022-06-08 04:47:29,755] {subprocess.py:92} INFO - 		Bytes Read=0
+[2022-06-08 04:47:29,756] {subprocess.py:92} INFO - 	File Output Format Counters
+[2022-06-08 04:47:29,756] {subprocess.py:92} INFO - 		Bytes Written=63211788
+[2022-06-08 04:47:29,757] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapreduce.ImportJobBase: Transferred 60.2835 MB in 4.6152 seconds (13.0619 MB/sec)
+[2022-06-08 04:47:29,757] {subprocess.py:92} INFO - 22/06/08 04:47:29 INFO mapreduce.ImportJobBase: Retrieved 395361 records.
+[2022-06-08 04:47:30,239] {subprocess.py:92} INFO - /opt/sqoop/import_sqoop.sh: line 11: --target-dir: command not found
+[2022-06-08 04:47:30,254] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hbase does not exist! HBase imports will fail.
+[2022-06-08 04:47:30,255] {subprocess.py:92} INFO - Please set $HBASE_HOME to the root of your HBase installation.
+[2022-06-08 04:47:30,256] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../hcatalog does not exist! HCatalog jobs will fail.
+[2022-06-08 04:47:30,257] {subprocess.py:92} INFO - Please set $HCAT_HOME to the root of your HCatalog installation.
+[2022-06-08 04:47:30,257] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../accumulo does not exist! Accumulo imports will fail.
+[2022-06-08 04:47:30,258] {subprocess.py:92} INFO - Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+[2022-06-08 04:47:30,258] {subprocess.py:92} INFO - Warning: /usr/lib/sqoop/bin/../../zookeeper does not exist! Accumulo imports will fail.
+[2022-06-08 04:47:30,259] {subprocess.py:92} INFO - Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+[2022-06-08 04:47:30,829] {subprocess.py:92} INFO - 22/06/08 04:47:30 INFO sqoop.Sqoop: Running Sqoop version: 1.4.7
+[2022-06-08 04:47:30,928] {subprocess.py:92} INFO - 22/06/08 04:47:30 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+[2022-06-08 04:47:31,026] {subprocess.py:92} INFO - 22/06/08 04:47:31 INFO manager.SqlManager: Using default fetchSize of 1000
+[2022-06-08 04:47:31,027] {subprocess.py:92} INFO - 22/06/08 04:47:31 INFO tool.CodeGenTool: Beginning code generation
+[2022-06-08 04:47:31,139] {subprocess.py:92} INFO - 22/06/08 04:47:31 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM "restaurant_detail" AS t LIMIT 1
+[2022-06-08 04:47:31,173] {subprocess.py:92} INFO - 22/06/08 04:47:31 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /opt/hadoop-2.7.4
+[2022-06-08 04:47:32,337] {subprocess.py:92} INFO - Note: /tmp/sqoop-root/compile/3b475fd428a2b5ba09960dcf0d6c7077/restaurant_detail.java uses or overrides a deprecated API.
+[2022-06-08 04:47:32,338] {subprocess.py:92} INFO - Note: Recompile with -Xlint:deprecation for details.
+[2022-06-08 04:47:32,340] {subprocess.py:92} INFO - 22/06/08 04:47:32 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-root/compile/3b475fd428a2b5ba09960dcf0d6c7077/restaurant_detail.jar
+[2022-06-08 04:47:32,354] {subprocess.py:92} INFO - 22/06/08 04:47:32 WARN manager.PostgresqlManager: It looks like you are importing from postgresql.
+[2022-06-08 04:47:32,355] {subprocess.py:92} INFO - 22/06/08 04:47:32 WARN manager.PostgresqlManager: This transfer can be faster! Use the --direct
+[2022-06-08 04:47:32,356] {subprocess.py:92} INFO - 22/06/08 04:47:32 WARN manager.PostgresqlManager: option to exercise a postgresql-specific fast path.
+[2022-06-08 04:47:32,361] {subprocess.py:92} INFO - 22/06/08 04:47:32 INFO mapreduce.ImportJobBase: Beginning import of restaurant_detail
+[2022-06-08 04:47:32,512] {subprocess.py:92} INFO - 22/06/08 04:47:32 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+[2022-06-08 04:47:33,130] {subprocess.py:92} INFO - 22/06/08 04:47:33 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+[2022-06-08 04:47:33,149] {subprocess.py:92} INFO - 22/06/08 04:47:33 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+[2022-06-08 04:47:33,150] {subprocess.py:92} INFO - 22/06/08 04:47:33 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+[2022-06-08 04:47:33,527] {subprocess.py:92} INFO - 22/06/08 04:47:33 INFO db.DBInputFormat: Using read commited transaction isolation
+[2022-06-08 04:47:33,539] {subprocess.py:92} INFO - 22/06/08 04:47:33 INFO mapreduce.JobSubmitter: number of splits:1
+[2022-06-08 04:47:33,636] {subprocess.py:92} INFO - 22/06/08 04:47:33 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local521217745_0001
+[2022-06-08 04:47:35,112] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653725/ant-eclipse-1.0-jvm1.2.jar <- /opt/ant-eclipse-1.0-jvm1.2.jar
+[2022-06-08 04:47:35,219] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/ant-eclipse-1.0-jvm1.2.jar as file:/tmp/hadoop-root/mapred/local/1654663653725/ant-eclipse-1.0-jvm1.2.jar
+[2022-06-08 04:47:35,236] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653726/paranamer-2.7.jar <- /opt/paranamer-2.7.jar
+[2022-06-08 04:47:35,285] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/paranamer-2.7.jar as file:/tmp/hadoop-root/mapred/local/1654663653726/paranamer-2.7.jar
+[2022-06-08 04:47:35,293] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653727/commons-codec-1.4.jar <- /opt/commons-codec-1.4.jar
+[2022-06-08 04:47:35,309] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-codec-1.4.jar as file:/tmp/hadoop-root/mapred/local/1654663653727/commons-codec-1.4.jar
+[2022-06-08 04:47:35,310] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653728/commons-jexl-2.1.1.jar <- /opt/commons-jexl-2.1.1.jar
+[2022-06-08 04:47:35,313] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-jexl-2.1.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653728/commons-jexl-2.1.1.jar
+[2022-06-08 04:47:35,314] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653729/jackson-core-2.3.1.jar <- /opt/jackson-core-2.3.1.jar
+[2022-06-08 04:47:35,315] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-core-2.3.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653729/jackson-core-2.3.1.jar
+[2022-06-08 04:47:35,316] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653730/parquet-jackson-1.6.0.jar <- /opt/parquet-jackson-1.6.0.jar
+[2022-06-08 04:47:35,319] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-jackson-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653730/parquet-jackson-1.6.0.jar
+[2022-06-08 04:47:35,320] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653731/parquet-hadoop-1.6.0.jar <- /opt/parquet-hadoop-1.6.0.jar
+[2022-06-08 04:47:35,322] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-hadoop-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653731/parquet-hadoop-1.6.0.jar
+[2022-06-08 04:47:35,323] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653732/jackson-annotations-2.3.1.jar <- /opt/jackson-annotations-2.3.1.jar
+[2022-06-08 04:47:35,329] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-annotations-2.3.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653732/jackson-annotations-2.3.1.jar
+[2022-06-08 04:47:35,330] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653733/commons-logging-1.1.1.jar <- /opt/commons-logging-1.1.1.jar
+[2022-06-08 04:47:35,332] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-logging-1.1.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653733/commons-logging-1.1.1.jar
+[2022-06-08 04:47:35,333] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653734/opencsv-2.3.jar <- /opt/opencsv-2.3.jar
+[2022-06-08 04:47:35,334] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/opencsv-2.3.jar as file:/tmp/hadoop-root/mapred/local/1654663653734/opencsv-2.3.jar
+[2022-06-08 04:47:35,335] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653735/kite-data-hive-1.1.0.jar <- /opt/kite-data-hive-1.1.0.jar
+[2022-06-08 04:47:35,337] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-data-hive-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653735/kite-data-hive-1.1.0.jar
+[2022-06-08 04:47:35,338] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653736/hsqldb-1.8.0.10.jar <- /opt/hsqldb-1.8.0.10.jar
+[2022-06-08 04:47:35,339] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/hsqldb-1.8.0.10.jar as file:/tmp/hadoop-root/mapred/local/1654663653736/hsqldb-1.8.0.10.jar
+[2022-06-08 04:47:35,340] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653737/commons-lang3-3.4.jar <- /opt/commons-lang3-3.4.jar
+[2022-06-08 04:47:35,342] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-lang3-3.4.jar as file:/tmp/hadoop-root/mapred/local/1654663653737/commons-lang3-3.4.jar
+[2022-06-08 04:47:35,343] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653738/xz-1.5.jar <- /opt/xz-1.5.jar
+[2022-06-08 04:47:35,345] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/xz-1.5.jar as file:/tmp/hadoop-root/mapred/local/1654663653738/xz-1.5.jar
+[2022-06-08 04:47:35,346] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653739/parquet-column-1.6.0.jar <- /opt/parquet-column-1.6.0.jar
+[2022-06-08 04:47:35,347] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-column-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653739/parquet-column-1.6.0.jar
+[2022-06-08 04:47:35,348] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653740/kite-data-mapreduce-1.1.0.jar <- /opt/kite-data-mapreduce-1.1.0.jar
+[2022-06-08 04:47:35,350] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-data-mapreduce-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653740/kite-data-mapreduce-1.1.0.jar
+[2022-06-08 04:47:35,351] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653741/jackson-core-asl-1.9.13.jar <- /opt/jackson-core-asl-1.9.13.jar
+[2022-06-08 04:47:35,352] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-core-asl-1.9.13.jar as file:/tmp/hadoop-root/mapred/local/1654663653741/jackson-core-asl-1.9.13.jar
+[2022-06-08 04:47:35,353] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653742/parquet-generator-1.6.0.jar <- /opt/parquet-generator-1.6.0.jar
+[2022-06-08 04:47:35,355] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-generator-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653742/parquet-generator-1.6.0.jar
+[2022-06-08 04:47:35,355] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653743/parquet-common-1.6.0.jar <- /opt/parquet-common-1.6.0.jar
+[2022-06-08 04:47:35,358] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-common-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653743/parquet-common-1.6.0.jar
+[2022-06-08 04:47:35,359] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653744/jackson-databind-2.3.1.jar <- /opt/jackson-databind-2.3.1.jar
+[2022-06-08 04:47:35,361] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-databind-2.3.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653744/jackson-databind-2.3.1.jar
+[2022-06-08 04:47:35,361] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653745/avro-1.8.1.jar <- /opt/avro-1.8.1.jar
+[2022-06-08 04:47:35,363] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/avro-1.8.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653745/avro-1.8.1.jar
+[2022-06-08 04:47:35,364] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653746/snappy-java-1.1.1.6.jar <- /opt/snappy-java-1.1.1.6.jar
+[2022-06-08 04:47:35,365] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/snappy-java-1.1.1.6.jar as file:/tmp/hadoop-root/mapred/local/1654663653746/snappy-java-1.1.1.6.jar
+[2022-06-08 04:47:35,366] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653747/kite-hadoop-compatibility-1.1.0.jar <- /opt/kite-hadoop-compatibility-1.1.0.jar
+[2022-06-08 04:47:35,368] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-hadoop-compatibility-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653747/kite-hadoop-compatibility-1.1.0.jar
+[2022-06-08 04:47:35,369] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653748/parquet-avro-1.6.0.jar <- /opt/parquet-avro-1.6.0.jar
+[2022-06-08 04:47:35,371] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-avro-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653748/parquet-avro-1.6.0.jar
+[2022-06-08 04:47:35,372] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653749/slf4j-api-1.6.1.jar <- /opt/slf4j-api-1.6.1.jar
+[2022-06-08 04:47:35,378] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/slf4j-api-1.6.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653749/slf4j-api-1.6.1.jar
+[2022-06-08 04:47:35,379] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653750/avro-mapred-1.8.1-hadoop2.jar <- /opt/avro-mapred-1.8.1-hadoop2.jar
+[2022-06-08 04:47:35,382] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/avro-mapred-1.8.1-hadoop2.jar as file:/tmp/hadoop-root/mapred/local/1654663653750/avro-mapred-1.8.1-hadoop2.jar
+[2022-06-08 04:47:35,383] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653751/ant-contrib-1.0b3.jar <- /opt/ant-contrib-1.0b3.jar
+[2022-06-08 04:47:35,385] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/ant-contrib-1.0b3.jar as file:/tmp/hadoop-root/mapred/local/1654663653751/ant-contrib-1.0b3.jar
+[2022-06-08 04:47:35,386] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653752/sqoop-1.4.7.jar <- /opt/sqoop-1.4.7.jar
+[2022-06-08 04:47:35,388] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/sqoop-1.4.7.jar as file:/tmp/hadoop-root/mapred/local/1654663653752/sqoop-1.4.7.jar
+[2022-06-08 04:47:35,389] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653753/commons-io-1.4.jar <- /opt/commons-io-1.4.jar
+[2022-06-08 04:47:35,393] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-io-1.4.jar as file:/tmp/hadoop-root/mapred/local/1654663653753/commons-io-1.4.jar
+[2022-06-08 04:47:35,394] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653754/parquet-format-2.2.0-rc1.jar <- /opt/parquet-format-2.2.0-rc1.jar
+[2022-06-08 04:47:35,395] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-format-2.2.0-rc1.jar as file:/tmp/hadoop-root/mapred/local/1654663653754/parquet-format-2.2.0-rc1.jar
+[2022-06-08 04:47:35,396] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653755/kite-data-core-1.1.0.jar <- /opt/kite-data-core-1.1.0.jar
+[2022-06-08 04:47:35,405] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/kite-data-core-1.1.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653755/kite-data-core-1.1.0.jar
+[2022-06-08 04:47:35,406] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653756/postgresql-42.2.19.jre6.jar <- /opt/postgresql-42.2.19.jre6.jar
+[2022-06-08 04:47:35,409] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/postgresql-42.2.19.jre6.jar as file:/tmp/hadoop-root/mapred/local/1654663653756/postgresql-42.2.19.jre6.jar
+[2022-06-08 04:47:35,411] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653757/commons-compress-1.8.1.jar <- /opt/commons-compress-1.8.1.jar
+[2022-06-08 04:47:35,413] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/commons-compress-1.8.1.jar as file:/tmp/hadoop-root/mapred/local/1654663653757/commons-compress-1.8.1.jar
+[2022-06-08 04:47:35,414] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653758/jackson-mapper-asl-1.9.13.jar <- /opt/jackson-mapper-asl-1.9.13.jar
+[2022-06-08 04:47:35,416] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/jackson-mapper-asl-1.9.13.jar as file:/tmp/hadoop-root/mapred/local/1654663653758/jackson-mapper-asl-1.9.13.jar
+[2022-06-08 04:47:35,417] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-root/mapred/local/1654663653759/parquet-encoding-1.6.0.jar <- /opt/parquet-encoding-1.6.0.jar
+[2022-06-08 04:47:35,419] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/lib/sqoop/lib/parquet-encoding-1.6.0.jar as file:/tmp/hadoop-root/mapred/local/1654663653759/parquet-encoding-1.6.0.jar
+[2022-06-08 04:47:35,498] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653725/ant-eclipse-1.0-jvm1.2.jar
+[2022-06-08 04:47:35,499] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653726/paranamer-2.7.jar
+[2022-06-08 04:47:35,500] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653727/commons-codec-1.4.jar
+[2022-06-08 04:47:35,501] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653728/commons-jexl-2.1.1.jar
+[2022-06-08 04:47:35,502] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653729/jackson-core-2.3.1.jar
+[2022-06-08 04:47:35,503] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653730/parquet-jackson-1.6.0.jar
+[2022-06-08 04:47:35,503] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653731/parquet-hadoop-1.6.0.jar
+[2022-06-08 04:47:35,504] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653732/jackson-annotations-2.3.1.jar
+[2022-06-08 04:47:35,505] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653733/commons-logging-1.1.1.jar
+[2022-06-08 04:47:35,507] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653734/opencsv-2.3.jar
+[2022-06-08 04:47:35,507] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653735/kite-data-hive-1.1.0.jar
+[2022-06-08 04:47:35,508] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653736/hsqldb-1.8.0.10.jar
+[2022-06-08 04:47:35,509] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653737/commons-lang3-3.4.jar
+[2022-06-08 04:47:35,510] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653738/xz-1.5.jar
+[2022-06-08 04:47:35,511] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653739/parquet-column-1.6.0.jar
+[2022-06-08 04:47:35,512] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653740/kite-data-mapreduce-1.1.0.jar
+[2022-06-08 04:47:35,512] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653741/jackson-core-asl-1.9.13.jar
+[2022-06-08 04:47:35,513] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653742/parquet-generator-1.6.0.jar
+[2022-06-08 04:47:35,514] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653743/parquet-common-1.6.0.jar
+[2022-06-08 04:47:35,515] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653744/jackson-databind-2.3.1.jar
+[2022-06-08 04:47:35,515] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653745/avro-1.8.1.jar
+[2022-06-08 04:47:35,516] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653746/snappy-java-1.1.1.6.jar
+[2022-06-08 04:47:35,517] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653747/kite-hadoop-compatibility-1.1.0.jar
+[2022-06-08 04:47:35,518] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653748/parquet-avro-1.6.0.jar
+[2022-06-08 04:47:35,519] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653749/slf4j-api-1.6.1.jar
+[2022-06-08 04:47:35,519] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653750/avro-mapred-1.8.1-hadoop2.jar
+[2022-06-08 04:47:35,520] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653751/ant-contrib-1.0b3.jar
+[2022-06-08 04:47:35,522] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653752/sqoop-1.4.7.jar
+[2022-06-08 04:47:35,523] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653753/commons-io-1.4.jar
+[2022-06-08 04:47:35,524] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653754/parquet-format-2.2.0-rc1.jar
+[2022-06-08 04:47:35,525] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653755/kite-data-core-1.1.0.jar
+[2022-06-08 04:47:35,526] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653756/postgresql-42.2.19.jre6.jar
+[2022-06-08 04:47:35,526] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653757/commons-compress-1.8.1.jar
+[2022-06-08 04:47:35,527] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653758/jackson-mapper-asl-1.9.13.jar
+[2022-06-08 04:47:35,528] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalDistributedCacheManager: file:/tmp/hadoop-root/mapred/local/1654663653759/parquet-encoding-1.6.0.jar
+[2022-06-08 04:47:35,530] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+[2022-06-08 04:47:35,530] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapreduce.Job: Running job: job_local521217745_0001
+[2022-06-08 04:47:35,531] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+[2022-06-08 04:47:35,532] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-08 04:47:35,533] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+[2022-06-08 04:47:35,639] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalJobRunner: Waiting for map tasks
+[2022-06-08 04:47:35,641] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.LocalJobRunner: Starting task: attempt_local521217745_0001_m_000000_0
+[2022-06-08 04:47:35,685] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-06-08 04:47:35,718] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+[2022-06-08 04:47:35,728] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO db.DBInputFormat: Using read commited transaction isolation
+[2022-06-08 04:47:35,733] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO mapred.MapTask: Processing split: 1=1 AND 1=1
+[2022-06-08 04:47:35,802] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO db.DBRecordReader: Working on split: 1=1 AND 1=1
+[2022-06-08 04:47:35,803] {subprocess.py:92} INFO - 22/06/08 04:47:35 INFO db.DBRecordReader: Executing query: SELECT "id", "restaurant_name", "category", "estimated_cooking_time", "latitude", "longitude" FROM "restaurant_detail" WHERE ( 1=1 ) AND ( 1=1 )
+[2022-06-08 04:47:36,022] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.AutoProgressMapper: Auto-progress thread is finished. keepGoing=false
+[2022-06-08 04:47:36,025] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.LocalJobRunner:
+[2022-06-08 04:47:36,117] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.Task: Task:attempt_local521217745_0001_m_000000_0 is done. And is in the process of committing
+[2022-06-08 04:47:36,127] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.LocalJobRunner:
+[2022-06-08 04:47:36,129] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.Task: Task attempt_local521217745_0001_m_000000_0 is allowed to commit now
+[2022-06-08 04:47:36,136] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO output.FileOutputCommitter: Saved output of task 'attempt_local521217745_0001_m_000000_0' to hdfs://namenode:8020/user/sqoop/restaurant_detail/_temporary/0/task_local521217745_0001_m_000000
+[2022-06-08 04:47:36,138] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.LocalJobRunner: map
+[2022-06-08 04:47:36,139] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.Task: Task 'attempt_local521217745_0001_m_000000_0' done.
+[2022-06-08 04:47:36,139] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.LocalJobRunner: Finishing task: attempt_local521217745_0001_m_000000_0
+[2022-06-08 04:47:36,140] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapred.LocalJobRunner: map task executor complete.
+[2022-06-08 04:47:36,511] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.Job: Job job_local521217745_0001 running in uber mode : false
+[2022-06-08 04:47:36,512] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.Job:  map 100% reduce 0%
+[2022-06-08 04:47:36,515] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.Job: Job job_local521217745_0001 completed successfully
+[2022-06-08 04:47:36,535] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.Job: Counters: 20
+[2022-06-08 04:47:36,536] {subprocess.py:92} INFO - 	File System Counters
+[2022-06-08 04:47:36,538] {subprocess.py:92} INFO - 		FILE: Number of bytes read=19089073
+[2022-06-08 04:47:36,539] {subprocess.py:92} INFO - 		FILE: Number of bytes written=19548394
+[2022-06-08 04:47:36,540] {subprocess.py:92} INFO - 		FILE: Number of read operations=0
+[2022-06-08 04:47:36,540] {subprocess.py:92} INFO - 		FILE: Number of large read operations=0
+[2022-06-08 04:47:36,542] {subprocess.py:92} INFO - 		FILE: Number of write operations=0
+[2022-06-08 04:47:36,543] {subprocess.py:92} INFO - 		HDFS: Number of bytes read=0
+[2022-06-08 04:47:36,544] {subprocess.py:92} INFO - 		HDFS: Number of bytes written=743656
+[2022-06-08 04:47:36,546] {subprocess.py:92} INFO - 		HDFS: Number of read operations=4
+[2022-06-08 04:47:36,547] {subprocess.py:92} INFO - 		HDFS: Number of large read operations=0
+[2022-06-08 04:47:36,549] {subprocess.py:92} INFO - 		HDFS: Number of write operations=3
+[2022-06-08 04:47:36,550] {subprocess.py:92} INFO - 	Map-Reduce Framework
+[2022-06-08 04:47:36,551] {subprocess.py:92} INFO - 		Map input records=12623
+[2022-06-08 04:47:36,552] {subprocess.py:92} INFO - 		Map output records=12623
+[2022-06-08 04:47:36,553] {subprocess.py:92} INFO - 		Input split bytes=87
+[2022-06-08 04:47:36,555] {subprocess.py:92} INFO - 		Spilled Records=0
+[2022-06-08 04:47:36,555] {subprocess.py:92} INFO - 		Failed Shuffles=0
+[2022-06-08 04:47:36,556] {subprocess.py:92} INFO - 		Merged Map outputs=0
+[2022-06-08 04:47:36,557] {subprocess.py:92} INFO - 		GC time elapsed (ms)=10
+[2022-06-08 04:47:36,558] {subprocess.py:92} INFO - 		Total committed heap usage (bytes)=246415360
+[2022-06-08 04:47:36,559] {subprocess.py:92} INFO - 	File Input Format Counters
+[2022-06-08 04:47:36,559] {subprocess.py:92} INFO - 		Bytes Read=0
+[2022-06-08 04:47:36,560] {subprocess.py:92} INFO - 	File Output Format Counters
+[2022-06-08 04:47:36,561] {subprocess.py:92} INFO - 		Bytes Written=743656
+[2022-06-08 04:47:36,562] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.ImportJobBase: Transferred 726.2266 KB in 3.3993 seconds (213.637 KB/sec)
+[2022-06-08 04:47:36,562] {subprocess.py:92} INFO - 22/06/08 04:47:36 INFO mapreduce.ImportJobBase: Retrieved 12623 records.
+[2022-06-08 04:47:37,052] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-08 04:47:37,089] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=import_sqoop, execution_date=20220608T023954, start_date=20220608T044717, end_date=20220608T044737
+[2022-06-08 04:47:37,121] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 04:47:37,176] {local_task_job.py:273} INFO - 2 downstream tasks scheduled from follow-on schedule check

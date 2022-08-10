@@ -1,0 +1,68 @@
+[2022-06-08 03:38:00,870] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_order_detail manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 03:38:00,902] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_order_detail manual__2022-06-08T02:39:54.959518+00:00 [queued]>
+[2022-06-08 03:38:00,904] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 03:38:00,906] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 03:38:00,907] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 03:38:00,952] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): create_hive_order_detail> on 2022-06-08 02:39:54.959518+00:00
+[2022-06-08 03:38:00,982] {standard_task_runner.py:52} INFO - Started process 4445 to run task
+[2022-06-08 03:38:01,004] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_hive_order_detail', 'manual__2022-06-08T02:39:54.959518+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqcbh_onq', '--error-file', '/tmp/tmp894f5qww']
+[2022-06-08 03:38:01,010] {standard_task_runner.py:80} INFO - Job 82: Subtask create_hive_order_detail
+[2022-06-08 03:38:01,284] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_hive_order_detail manual__2022-06-08T02:39:54.959518+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 03:38:01,717] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_hive_order_detail
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T02:39:54.959518+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T02:39:54.959518+00:00
+[2022-06-08 03:38:01,719] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 03:38:01,722] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server hive -f /opt/hql/order_detail.hql ']
+[2022-06-08 03:38:01,755] {subprocess.py:85} INFO - Output:
+[2022-06-08 03:38:10,559] {subprocess.py:92} INFO - SLF4J: Class path contains multiple SLF4J bindings.
+[2022-06-08 03:38:10,588] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-08 03:38:10,590] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-08 03:38:10,591] {subprocess.py:92} INFO - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[2022-06-08 03:38:10,592] {subprocess.py:92} INFO - SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+[2022-06-08 03:38:16,249] {subprocess.py:92} INFO - 
+[2022-06-08 03:38:16,251] {subprocess.py:92} INFO - Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+[2022-06-08 03:38:32,017] {subprocess.py:92} INFO - OK
+[2022-06-08 03:38:32,022] {subprocess.py:92} INFO - Time taken: 7.228 seconds
+[2022-06-08 03:38:32,731] {subprocess.py:92} INFO - OK
+[2022-06-08 03:38:32,732] {subprocess.py:92} INFO - Time taken: 0.702 seconds
+[2022-06-08 03:38:32,978] {subprocess.py:92} INFO - OK
+[2022-06-08 03:38:32,991] {subprocess.py:92} INFO - Time taken: 0.24 seconds
+[2022-06-08 03:38:37,242] {subprocess.py:92} INFO - OK
+[2022-06-08 03:38:37,248] {subprocess.py:92} INFO - 0
+[2022-06-08 03:38:37,253] {subprocess.py:92} INFO - Time taken: 4.248 seconds, Fetched: 1 row(s)
+[2022-06-08 03:38:37,754] {subprocess.py:92} INFO - OK
+[2022-06-08 03:38:37,775] {subprocess.py:92} INFO - Time taken: 0.499 seconds
+[2022-06-08 03:38:38,086] {subprocess.py:92} INFO - OK
+[2022-06-08 03:38:38,175] {subprocess.py:92} INFO - CREATE EXTERNAL TABLE `order_detail`(
+[2022-06-08 03:38:38,176] {subprocess.py:92} INFO -   `order_created_timestamp` timestamp,
+[2022-06-08 03:38:38,178] {subprocess.py:92} INFO -   `status` string,
+[2022-06-08 03:38:38,179] {subprocess.py:92} INFO -   `price` int,
+[2022-06-08 03:38:38,180] {subprocess.py:92} INFO -   `discount` float,
+[2022-06-08 03:38:38,181] {subprocess.py:92} INFO -   `id` string,
+[2022-06-08 03:38:38,181] {subprocess.py:92} INFO -   `driver_id` string,
+[2022-06-08 03:38:38,182] {subprocess.py:92} INFO -   `user_id` string,
+[2022-06-08 03:38:38,183] {subprocess.py:92} INFO -   `restaurant_id` string)
+[2022-06-08 03:38:38,184] {subprocess.py:92} INFO - PARTITIONED BY (
+[2022-06-08 03:38:38,185] {subprocess.py:92} INFO -   `dt` string)
+[2022-06-08 03:38:38,185] {subprocess.py:92} INFO - ROW FORMAT SERDE
+[2022-06-08 03:38:38,186] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
+[2022-06-08 03:38:38,187] {subprocess.py:92} INFO - STORED AS INPUTFORMAT
+[2022-06-08 03:38:38,189] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+[2022-06-08 03:38:38,189] {subprocess.py:92} INFO - OUTPUTFORMAT
+[2022-06-08 03:38:38,191] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
+[2022-06-08 03:38:38,191] {subprocess.py:92} INFO - LOCATION
+[2022-06-08 03:38:38,192] {subprocess.py:92} INFO -   'hdfs://namenode:8020/user/spark/transformed_order_detail'
+[2022-06-08 03:38:38,193] {subprocess.py:92} INFO - TBLPROPERTIES (
+[2022-06-08 03:38:38,194] {subprocess.py:92} INFO -   'transient_lastDdlTime'='1654659512')
+[2022-06-08 03:38:38,196] {subprocess.py:92} INFO - Time taken: 0.305 seconds, Fetched: 21 row(s)
+[2022-06-08 03:38:38,875] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-08 03:38:38,917] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_hive_order_detail, execution_date=20220608T023954, start_date=20220608T033800, end_date=20220608T033838
+[2022-06-08 03:38:38,976] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 03:38:39,014] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

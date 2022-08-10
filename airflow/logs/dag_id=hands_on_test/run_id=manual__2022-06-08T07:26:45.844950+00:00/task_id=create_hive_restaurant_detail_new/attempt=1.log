@@ -1,0 +1,95 @@
+[2022-06-08 10:31:38,774] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_restaurant_detail_new manual__2022-06-08T07:26:45.844950+00:00 [queued]>
+[2022-06-08 10:31:38,793] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_restaurant_detail_new manual__2022-06-08T07:26:45.844950+00:00 [queued]>
+[2022-06-08 10:31:38,795] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 10:31:38,796] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 10:31:38,796] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 10:31:38,818] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): create_hive_restaurant_detail_new> on 2022-06-08 07:26:45.844950+00:00
+[2022-06-08 10:31:38,825] {standard_task_runner.py:52} INFO - Started process 30603 to run task
+[2022-06-08 10:31:38,835] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_hive_restaurant_detail_new', 'manual__2022-06-08T07:26:45.844950+00:00', '--job-id', '238', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpvknnyt91', '--error-file', '/tmp/tmpoy3s7f8i']
+[2022-06-08 10:31:38,839] {standard_task_runner.py:80} INFO - Job 238: Subtask create_hive_restaurant_detail_new
+[2022-06-08 10:31:38,956] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_hive_restaurant_detail_new manual__2022-06-08T07:26:45.844950+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 10:31:39,116] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_hive_restaurant_detail_new
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T07:26:45.844950+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T07:26:45.844950+00:00
+[2022-06-08 10:31:39,119] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-08 10:31:39,121] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server hive -f /opt/hql/restaurant_detail_new.hql ']
+[2022-06-08 10:31:39,164] {subprocess.py:85} INFO - Output:
+[2022-06-08 10:31:43,259] {subprocess.py:92} INFO - SLF4J: Class path contains multiple SLF4J bindings.
+[2022-06-08 10:31:43,260] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-08 10:31:43,261] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-08 10:31:43,267] {subprocess.py:92} INFO - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[2022-06-08 10:31:43,269] {subprocess.py:92} INFO - SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+[2022-06-08 10:31:45,524] {subprocess.py:92} INFO - 
+[2022-06-08 10:31:45,525] {subprocess.py:92} INFO - Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+[2022-06-08 10:31:51,958] {subprocess.py:92} INFO - OK
+[2022-06-08 10:31:51,970] {subprocess.py:92} INFO - Time taken: 3.778 seconds
+[2022-06-08 10:31:52,287] {subprocess.py:92} INFO - OK
+[2022-06-08 10:31:52,288] {subprocess.py:92} INFO - Time taken: 0.329 seconds
+[2022-06-08 10:31:52,565] {subprocess.py:92} INFO - OK
+[2022-06-08 10:31:52,573] {subprocess.py:92} INFO - Partitions not in metastore:	restaurant_detail_new:dt=latest
+[2022-06-08 10:31:52,575] {subprocess.py:92} INFO - Repair: Added partition to metastore restaurant_detail_new:dt=latest
+[2022-06-08 10:31:52,585] {subprocess.py:92} INFO - Time taken: 0.274 seconds, Fetched: 2 row(s)
+[2022-06-08 10:31:57,727] {subprocess.py:92} INFO - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+[2022-06-08 10:31:57,734] {subprocess.py:92} INFO - Query ID = root_20220608103152_3ccc0c73-1f22-4728-ab12-14464658597f
+[2022-06-08 10:31:57,738] {subprocess.py:92} INFO - Total jobs = 1
+[2022-06-08 10:31:57,767] {subprocess.py:92} INFO - Launching Job 1 out of 1
+[2022-06-08 10:31:57,770] {subprocess.py:92} INFO - Number of reduce tasks determined at compile time: 1
+[2022-06-08 10:31:57,774] {subprocess.py:92} INFO - In order to change the average load for a reducer (in bytes):
+[2022-06-08 10:31:57,775] {subprocess.py:92} INFO -   set hive.exec.reducers.bytes.per.reducer=<number>
+[2022-06-08 10:31:57,776] {subprocess.py:92} INFO - In order to limit the maximum number of reducers:
+[2022-06-08 10:31:57,777] {subprocess.py:92} INFO -   set hive.exec.reducers.max=<number>
+[2022-06-08 10:31:57,778] {subprocess.py:92} INFO - In order to set a constant number of reducers:
+[2022-06-08 10:31:57,778] {subprocess.py:92} INFO -   set mapreduce.job.reduces=<number>
+[2022-06-08 10:31:59,316] {subprocess.py:92} INFO - Job running in-process (local Hadoop)
+[2022-06-08 10:31:59,947] {subprocess.py:92} INFO - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2022-06-08 10:31:59,952] {subprocess.py:92} INFO - SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2022-06-08 10:31:59,954] {subprocess.py:92} INFO - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2022-06-08 10:32:00,361] {subprocess.py:92} INFO - 2022-06-08 10:32:00,360 Stage-1 map = 0%,  reduce = 0%
+[2022-06-08 10:32:02,449] {subprocess.py:92} INFO - 2022-06-08 10:32:02,447 Stage-1 map = 100%,  reduce = 100%
+[2022-06-08 10:32:02,477] {subprocess.py:92} INFO - Ended Job = job_local679972997_0001
+[2022-06-08 10:32:02,496] {subprocess.py:92} INFO - MapReduce Jobs Launched:
+[2022-06-08 10:32:02,498] {subprocess.py:92} INFO - Stage-Stage-1:  HDFS Read: 533724 HDFS Write: 0 SUCCESS
+[2022-06-08 10:32:02,499] {subprocess.py:92} INFO - Total MapReduce CPU Time Spent: 0 msec
+[2022-06-08 10:32:02,500] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:02,631] {subprocess.py:92} INFO - 12623
+[2022-06-08 10:32:02,654] {subprocess.py:92} INFO - Time taken: 9.907 seconds, Fetched: 1 row(s)
+[2022-06-08 10:32:03,097] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:03,180] {subprocess.py:92} INFO - R_99988	Restaurant A	BREAKFAST	69.0	2	13.59705995	100.74540140	latest
+[2022-06-08 10:32:03,181] {subprocess.py:92} INFO - R_99983	Restaurant B	BREAKFAST	43.0	2	13.74610800	100.52930400	latest
+[2022-06-08 10:32:03,182] {subprocess.py:92} INFO - R_99976	Restaurant C	BREAKFAST	70.0	2	13.99500277	100.65400990	latest
+[2022-06-08 10:32:03,183] {subprocess.py:92} INFO - R_99970	Restaurant D	BREAKFAST	70.0	2	14.04092269	100.60976740	latest
+[2022-06-08 10:32:03,184] {subprocess.py:92} INFO - R_99968	Restaurant E	BREAKFAST	20.0	1	13.71098548	100.40930720	latest
+[2022-06-08 10:32:03,190] {subprocess.py:92} INFO - Time taken: 0.434 seconds, Fetched: 5 row(s)
+[2022-06-08 10:32:03,356] {subprocess.py:92} INFO - OK
+[2022-06-08 10:32:03,369] {subprocess.py:92} INFO - CREATE EXTERNAL TABLE `restaurant_detail_new`(
+[2022-06-08 10:32:03,369] {subprocess.py:92} INFO -   `id` string,
+[2022-06-08 10:32:03,370] {subprocess.py:92} INFO -   `restaurant_name` string,
+[2022-06-08 10:32:03,371] {subprocess.py:92} INFO -   `category` string,
+[2022-06-08 10:32:03,372] {subprocess.py:92} INFO -   `estimated_cooking_time` float,
+[2022-06-08 10:32:03,373] {subprocess.py:92} INFO -   `cooking_bin` int,
+[2022-06-08 10:32:03,373] {subprocess.py:92} INFO -   `latitude` decimal(11,8),
+[2022-06-08 10:32:03,374] {subprocess.py:92} INFO -   `longitude` decimal(11,8))
+[2022-06-08 10:32:03,375] {subprocess.py:92} INFO - PARTITIONED BY (
+[2022-06-08 10:32:03,376] {subprocess.py:92} INFO -   `dt` string)
+[2022-06-08 10:32:03,376] {subprocess.py:92} INFO - ROW FORMAT SERDE
+[2022-06-08 10:32:03,379] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
+[2022-06-08 10:32:03,380] {subprocess.py:92} INFO - STORED AS INPUTFORMAT
+[2022-06-08 10:32:03,382] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+[2022-06-08 10:32:03,383] {subprocess.py:92} INFO - OUTPUTFORMAT
+[2022-06-08 10:32:03,384] {subprocess.py:92} INFO -   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
+[2022-06-08 10:32:03,384] {subprocess.py:92} INFO - LOCATION
+[2022-06-08 10:32:03,385] {subprocess.py:92} INFO -   'hdfs://namenode:8020/user/spark/restaurant_detail_new'
+[2022-06-08 10:32:03,386] {subprocess.py:92} INFO - TBLPROPERTIES (
+[2022-06-08 10:32:03,387] {subprocess.py:92} INFO -   'transient_lastDdlTime'='1654684312')
+[2022-06-08 10:32:03,387] {subprocess.py:92} INFO - Time taken: 0.165 seconds, Fetched: 20 row(s)
+[2022-06-08 10:32:04,048] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-08 10:32:04,104] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=create_hive_restaurant_detail_new, execution_date=20220608T072645, start_date=20220608T103138, end_date=20220608T103204
+[2022-06-08 10:32:04,149] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 10:32:04,215] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

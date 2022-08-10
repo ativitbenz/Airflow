@@ -1,0 +1,11 @@
+# scikit-learn==0.24.2
+# matplotlib==3.3.3
+# pandas==1.0.2
+docker==4.1.0
+# mysql-connector-python==8.0.29
+# apache-airflow-providers-apache-spark
+# apache-airflow-providers-mongo
+# apache-airflow-providers-oracle
+# apache-airflow-providers-tableau
+# apache-airflow-providers-apache-hive
+# apache-airflow-providers-jdbc

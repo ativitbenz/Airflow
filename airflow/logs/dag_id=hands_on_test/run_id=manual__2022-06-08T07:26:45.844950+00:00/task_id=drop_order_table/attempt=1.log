@@ -1,0 +1,37 @@
+[2022-06-08 07:26:48,364] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_table manual__2022-06-08T07:26:45.844950+00:00 [queued]>
+[2022-06-08 07:26:48,380] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.drop_order_table manual__2022-06-08T07:26:45.844950+00:00 [queued]>
+[2022-06-08 07:26:48,381] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 07:26:48,382] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-08 07:26:48,383] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 07:26:48,410] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): drop_order_table> on 2022-06-08 07:26:45.844950+00:00
+[2022-06-08 07:26:48,417] {standard_task_runner.py:52} INFO - Started process 19257 to run task
+[2022-06-08 07:26:48,449] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'drop_order_table', 'manual__2022-06-08T07:26:45.844950+00:00', '--job-id', '212', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpnuod0o91', '--error-file', '/tmp/tmpu7gky4uw']
+[2022-06-08 07:26:48,452] {standard_task_runner.py:80} INFO - Job 212: Subtask drop_order_table
+[2022-06-08 07:26:48,617] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.drop_order_table manual__2022-06-08T07:26:45.844950+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 07:26:48,949] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=drop_order_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T07:26:45.844950+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-08T07:26:45.844950+00:00
+[2022-06-08 07:26:48,964] {base.py:68} INFO - Using connection ID 'mysql_db' for task execution.
+[2022-06-08 07:26:48,984] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 181, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 113, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "host.docker.internal" (192.168.65.2), port 3306 failed: received invalid response to SSL negotiation: J
+
+[2022-06-08 07:26:49,006] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=hands_on_test, task_id=drop_order_table, execution_date=20220608T072645, start_date=20220608T072648, end_date=20220608T072649
+[2022-06-08 07:26:49,025] {standard_task_runner.py:97} ERROR - Failed to execute job 212 for task drop_order_table (connection to server at "host.docker.internal" (192.168.65.2), port 3306 failed: received invalid response to SSL negotiation: J
+; 19257)
+[2022-06-08 07:26:49,053] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-08 07:26:49,172] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

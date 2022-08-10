@@ -1,0 +1,41 @@
+[2022-06-07 06:41:14,092] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_order_detail scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 06:41:14,109] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.create_hive_order_detail scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 06:41:14,110] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 06:41:14,111] {taskinstance.py:1357} INFO - Starting attempt 4 of 4
+[2022-06-07 06:41:14,111] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 06:41:14,131] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): create_hive_order_detail> on 2022-06-06 00:00:00+00:00
+[2022-06-07 06:41:14,139] {standard_task_runner.py:52} INFO - Started process 7999 to run task
+[2022-06-07 06:41:14,144] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'create_hive_order_detail', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp35l4uo8d', '--error-file', '/tmp/tmpcsrgp25n']
+[2022-06-07 06:41:14,146] {standard_task_runner.py:80} INFO - Job 54: Subtask create_hive_order_detail
+[2022-06-07 06:41:14,226] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.create_hive_order_detail scheduled__2022-06-06T00:00:00+00:00 [running]> on host a4a1e1d603db
+[2022-06-07 06:41:14,328] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=create_hive_order_detail
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 06:41:14,330] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-07 06:41:14,331] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server hive -f /opt/hql/order_detail.hql ']
+[2022-06-07 06:41:14,343] {subprocess.py:85} INFO - Output:
+[2022-06-07 06:41:16,238] {subprocess.py:92} INFO - SLF4J: Class path contains multiple SLF4J bindings.
+[2022-06-07 06:41:16,239] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-07 06:41:16,240] {subprocess.py:92} INFO - SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.4/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[2022-06-07 06:41:16,241] {subprocess.py:92} INFO - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[2022-06-07 06:41:16,242] {subprocess.py:92} INFO - SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+[2022-06-07 06:41:17,177] {subprocess.py:92} INFO - 
+[2022-06-07 06:41:17,179] {subprocess.py:92} INFO - Logging initialized using configuration in file:/opt/hive/conf/hive-log4j2.properties Async: true
+[2022-06-07 06:41:18,441] {subprocess.py:92} INFO - Could not open input file for reading. (File file:/opt/hql/order_detail.hql does not exist)
+[2022-06-07 06:41:19,572] {subprocess.py:96} INFO - Command exited with return code 3
+[2022-06-07 06:41:19,592] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 3.
+[2022-06-07 06:41:19,599] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=hands_on_test, task_id=create_hive_order_detail, execution_date=20220606T000000, start_date=20220607T064114, end_date=20220607T064119
+[2022-06-07 06:41:19,615] {standard_task_runner.py:97} ERROR - Failed to execute job 54 for task create_hive_order_detail (Bash command failed. The command returned a non-zero exit code 3.; 7999)
+[2022-06-07 06:41:19,652] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 06:41:19,694] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,45 @@
+[2022-06-10 05:12:48,065] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 05:12:48,084] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.copy_order_data scheduled__2022-06-09T00:00:00+00:00 [queued]>
+[2022-06-10 05:12:48,085] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 05:12:48,086] {taskinstance.py:1357} INFO - Starting attempt 8 of 8
+[2022-06-10 05:12:48,087] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 05:12:48,126] {taskinstance.py:1377} INFO - Executing <Task(MySqlOperator): copy_order_data> on 2022-06-09 00:00:00+00:00
+[2022-06-10 05:12:48,136] {standard_task_runner.py:52} INFO - Started process 2080 to run task
+[2022-06-10 05:12:48,142] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'copy_order_data', 'scheduled__2022-06-09T00:00:00+00:00', '--job-id', '281', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwd6yh1ih', '--error-file', '/tmp/tmpbgcp8t4y']
+[2022-06-10 05:12:48,145] {standard_task_runner.py:80} INFO - Job 281: Subtask copy_order_data
+[2022-06-10 05:12:48,223] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.copy_order_data scheduled__2022-06-09T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-10 05:12:48,325] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=copy_order_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-09T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=8
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-09T00:00:00+00:00
+[2022-06-10 05:12:48,327] {mysql.py:82} INFO - Executing: 
+LOAD DATA INFILE '/var/lib/mysql/data/dataset/Orders.csv' INTO TABLE orders FIELDS TERMINATED BY ','
+IGNORE 1 ROWS;
+[2022-06-10 05:12:48,339] {base.py:68} INFO - Using connection ID 'mysql_db' for task execution.
+[2022-06-10 05:12:48,374] {dbapi.py:208} INFO - Running statement: 
+LOAD DATA INFILE '/var/lib/mysql/data/dataset/Orders.csv' INTO TABLE orders FIELDS TERMINATED BY ','
+IGNORE 1 ROWS;, parameters: None
+[2022-06-10 05:12:48,378] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/mysql/operators/mysql.py", line 84, in execute
+    hook.run(self.sql, autocommit=self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 188, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 212, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/airflow/.local/lib/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/airflow/.local/lib/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1045, "Access denied for user '***'@'%' (using password: YES)")
+[2022-06-10 05:12:48,393] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=hands_on_test, task_id=copy_order_data, execution_date=20220609T000000, start_date=20220610T051248, end_date=20220610T051248
+[2022-06-10 05:12:48,406] {standard_task_runner.py:97} ERROR - Failed to execute job 281 for task copy_order_data ((1045, "Access denied for user '***'@'%' (using password: YES)"); 2080)
+[2022-06-10 05:12:48,435] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-10 05:12:48,513] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

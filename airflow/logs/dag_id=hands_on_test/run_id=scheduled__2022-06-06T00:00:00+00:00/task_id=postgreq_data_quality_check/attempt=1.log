@@ -1,0 +1,78 @@
+[2022-06-07 02:40:40,847] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:40:40,862] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 02:40:40,863] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:40:40,863] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 02:40:40,864] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 02:40:40,882] {taskinstance.py:1377} INFO - Executing <Task(PostgresDataQualityOperator): postgreq_data_quality_check> on 2022-06-06 00:00:00+00:00
+[2022-06-07 02:40:40,888] {standard_task_runner.py:52} INFO - Started process 500 to run task
+[2022-06-07 02:40:40,921] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'postgreq_data_quality_check', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpef6mzz43', '--error-file', '/tmp/tmpa0bufvep']
+[2022-06-07 02:40:40,948] {standard_task_runner.py:80} INFO - Job 19: Subtask postgreq_data_quality_check
+[2022-06-07 02:40:41,250] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [running]> on host 078df8b61ea1
+[2022-06-07 02:40:41,365] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=postgreq_data_quality_check
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 02:40:41,367] {data_quality.py:20} INFO - DataQualityOperator
+[2022-06-07 02:40:41,378] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 02:40:41,454] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 02:40:41,470] {data_quality.py:36} WARNING - Data quality check passed
+[2022-06-07 02:40:41,491] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=postgreq_data_quality_check, execution_date=20220606T000000, start_date=20220607T024040, end_date=20220607T024041
+[2022-06-07 02:40:41,539] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 02:40:41,609] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-07 03:03:09,522] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 03:03:09,536] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 03:03:09,538] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 03:03:09,568] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 03:03:09,570] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 03:03:09,591] {taskinstance.py:1377} INFO - Executing <Task(PostgresDataQualityOperator): postgreq_data_quality_check> on 2022-06-06 00:00:00+00:00
+[2022-06-07 03:03:09,597] {standard_task_runner.py:52} INFO - Started process 821 to run task
+[2022-06-07 03:03:09,602] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'postgreq_data_quality_check', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmppwhmefui', '--error-file', '/tmp/tmp0nnoifey']
+[2022-06-07 03:03:09,604] {standard_task_runner.py:80} INFO - Job 16: Subtask postgreq_data_quality_check
+[2022-06-07 03:03:09,684] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [running]> on host 90bb19738779
+[2022-06-07 03:03:09,781] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=postgreq_data_quality_check
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 03:03:09,783] {data_quality.py:20} INFO - DataQualityOperator
+[2022-06-07 03:03:09,796] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 03:03:09,866] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 03:03:09,885] {data_quality.py:36} WARNING - Data quality check passed
+[2022-06-07 03:03:10,060] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=postgreq_data_quality_check, execution_date=20220606T000000, start_date=20220607T030309, end_date=20220607T030310
+[2022-06-07 03:03:10,096] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 03:03:10,158] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-07 09:24:55,474] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 09:24:55,490] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [queued]>
+[2022-06-07 09:24:55,491] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 09:24:55,493] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-07 09:24:55,494] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 09:24:55,516] {taskinstance.py:1377} INFO - Executing <Task(PostgresDataQualityOperator): postgreq_data_quality_check> on 2022-06-06 00:00:00+00:00
+[2022-06-07 09:24:55,523] {standard_task_runner.py:52} INFO - Started process 18115 to run task
+[2022-06-07 09:24:55,528] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'postgreq_data_quality_check', 'scheduled__2022-06-06T00:00:00+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpa0bxn2bf', '--error-file', '/tmp/tmpiixjtb6f']
+[2022-06-07 09:24:55,531] {standard_task_runner.py:80} INFO - Job 87: Subtask postgreq_data_quality_check
+[2022-06-07 09:24:55,620] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-06T00:00:00+00:00 [running]> on host a4a1e1d603db
+[2022-06-07 09:24:55,731] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=postgreq_data_quality_check
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T00:00:00+00:00
+[2022-06-07 09:24:55,733] {data_quality.py:20} INFO - DataQualityOperator
+[2022-06-07 09:24:55,752] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 09:24:55,841] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-07 09:24:55,864] {data_quality.py:36} WARNING - Data quality check passed
+[2022-06-07 09:24:55,885] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=postgreq_data_quality_check, execution_date=20220606T000000, start_date=20220607T092455, end_date=20220607T092455
+[2022-06-07 09:24:55,943] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 09:24:56,016] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

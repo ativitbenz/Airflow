@@ -1,0 +1,2 @@
+[2022-06-06 11:36:52,335] {taskinstance.py:1153} INFO - Dependencies not met for <TaskInstance: hands_on_test.copy_restaurant_detail_data manual__2022-06-06T11:36:51.400149+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_tasks_state={'total': 1, 'successes': 0, 'skipped': 0, 'failed': 0, 'upstream_failed': 0, 'done': 0}, upstream_task_ids={'create_restaurant_detail'}
+[2022-06-06 11:36:52,340] {local_task_job.py:101} INFO - Task is not able to be run

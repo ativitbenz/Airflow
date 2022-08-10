@@ -1,0 +1,31 @@
+[2022-06-10 07:04:51,082] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.install_sqoop manual__2022-06-10T06:57:39.204816+00:00 [queued]>
+[2022-06-10 07:04:51,108] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.install_sqoop manual__2022-06-10T06:57:39.204816+00:00 [queued]>
+[2022-06-10 07:04:51,110] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 07:04:51,113] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-06-10 07:04:51,115] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 07:04:51,145] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): install_sqoop> on 2022-06-10 06:57:39.204816+00:00
+[2022-06-10 07:04:51,156] {standard_task_runner.py:52} INFO - Started process 853 to run task
+[2022-06-10 07:04:51,162] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'install_sqoop', 'manual__2022-06-10T06:57:39.204816+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpr_d9bj6r', '--error-file', '/tmp/tmpgb_x54re']
+[2022-06-10 07:04:51,165] {standard_task_runner.py:80} INFO - Job 35: Subtask install_sqoop
+[2022-06-10 07:04:51,253] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.install_sqoop manual__2022-06-10T06:57:39.204816+00:00 [running]> on host a0fd966c00bf
+[2022-06-10 07:04:51,441] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=install_sqoop
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-10T06:57:39.204816+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-10T06:57:39.204816+00:00
+[2022-06-10 07:04:51,446] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-10 07:04:51,449] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker exec hive-server bash /opt/sqoop/install_sqoop.sh ']
+[2022-06-10 07:04:51,467] {subprocess.py:85} INFO - Output:
+[2022-06-10 07:04:51,878] {subprocess.py:92} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2022-06-10 07:04:51,884] {subprocess.py:92} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2022-06-10 07:04:56,356] {subprocess.py:92} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 17.1M    0 48729    0     0  44849      0  0:06:40  0:00:01  0:06:39 44870  3 17.1M    3  646k    0     0   345k      0  0:00:50  0:00:01  0:00:49  345k 26 17.1M   26 4639k    0     0  1614k      0  0:00:10  0:00:02  0:00:08 1614k 62 17.1M   62 10.7M    0     0  2844k      0  0:00:06  0:00:03  0:00:03 2843k100 17.1M  100 17.1M    0     0  3909k      0  0:00:04  0:00:04 --:--:-- 3910k
+[2022-06-10 07:05:19,134] {subprocess.py:92} INFO - rm: cannot remove 'sqoop-1.4.7.bin__hadoop-2.6.0': No such file or directory
+[2022-06-10 07:05:19,164] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-10 07:05:19,222] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=install_sqoop, execution_date=20220610T065739, start_date=20220610T070451, end_date=20220610T070519
+[2022-06-10 07:05:19,274] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-10 07:05:19,340] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2022-06-08 02:43:06,485] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 02:43:06,502] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-07T00:00:00+00:00 [queued]>
+[2022-06-08 02:43:06,503] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 02:43:06,504] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-06-08 02:43:06,505] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 02:43:06,524] {taskinstance.py:1377} INFO - Executing <Task(PostgresDataQualityOperator): postgreq_data_quality_check> on 2022-06-07 00:00:00+00:00
+[2022-06-08 02:43:06,531] {standard_task_runner.py:52} INFO - Started process 556 to run task
+[2022-06-08 02:43:06,537] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'hands_on_test', 'postgreq_data_quality_check', 'scheduled__2022-06-07T00:00:00+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp_03k61st', '--error-file', '/tmp/tmpoqxw6rtv']
+[2022-06-08 02:43:06,539] {standard_task_runner.py:80} INFO - Job 21: Subtask postgreq_data_quality_check
+[2022-06-08 02:43:06,628] {task_command.py:369} INFO - Running <TaskInstance: hands_on_test.postgreq_data_quality_check scheduled__2022-06-07T00:00:00+00:00 [running]> on host b79bd65fcc57
+[2022-06-08 02:43:06,730] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=pathairs
+AIRFLOW_CTX_DAG_ID=hands_on_test
+AIRFLOW_CTX_TASK_ID=postgreq_data_quality_check
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T00:00:00+00:00
+[2022-06-08 02:43:06,731] {data_quality.py:20} INFO - DataQualityOperator
+[2022-06-08 02:43:06,745] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 02:43:06,795] {base.py:68} INFO - Using connection ID 'postgres_db' for task execution.
+[2022-06-08 02:43:06,814] {data_quality.py:36} WARNING - Data quality check passed
+[2022-06-08 02:43:06,833] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=hands_on_test, task_id=postgreq_data_quality_check, execution_date=20220607T000000, start_date=20220608T024306, end_date=20220608T024306
+[2022-06-08 02:43:06,871] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-08 02:43:06,964] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
